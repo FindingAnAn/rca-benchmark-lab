@@ -1,0 +1,15 @@
+{
+  "dataset": "alibaba2021",
+  "sources": [
+    {
+      "file": "node.csv",
+      "sha256": "e5b0de7948e26b60730adc17c0dcff26aaa3a1e243b528876cb204c258c61d4f"
+    },
+    {
+      "file": "callgraph.csv",
+      "sha256": "46852e690d8bd5e3d4362c2da96c633e47c1c9966f8b3110fb6d49a826b0da49"
+    }
+  ],
+  "provenance": "fixture",
+  "availability": "retrospective unless source arrival column supplied"
+}

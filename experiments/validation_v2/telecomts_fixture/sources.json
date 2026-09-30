@@ -1,0 +1,20 @@
+[
+  {
+    "file": "train.jsonl",
+    "split": "train",
+    "capture_group": "train",
+    "sha256": "33cfe71f77ffc1a28052db7fe6bccc5dae51e498e2b728fa7f121ceac9e23972"
+  },
+  {
+    "file": "validation.jsonl",
+    "split": "validation",
+    "capture_group": "validation",
+    "sha256": "c138a37a4bcadeb2f7e418f9f8dc7c7f837ce40f53b593c359902f68807f2e11"
+  },
+  {
+    "file": "test.jsonl",
+    "split": "test",
+    "capture_group": "test",
+    "sha256": "952720c49ab2ae8f66078737760034cbc924f13fc9355af651c5474cd7be6aaa"
+  }
+]

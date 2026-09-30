@@ -1,0 +1,114 @@
+[
+  {
+    "file": "cases.parquet",
+    "url": "https://huggingface.co/datasets/phamquiluan/RCAEval/resolve/afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet",
+    "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "bytes": 29500,
+    "sha256": "c49a288920dbba2e8e724679a14636d5c7eb2b45426bba14007ef79a6c0ab1bb"
+  },
+  {
+    "file": "re1ob_adservice_cpu_1/metrics.parquet",
+    "url": "https://huggingface.co/datasets/phamquiluan/RCAEval/resolve/afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/re1ob_adservice_cpu_1/metrics.parquet",
+    "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "bytes": 368024,
+    "sha256": "464dcc215afe145d37f8b107ea291df7ffc0691756d375c54ddc1c09d0a2ac74"
+  },
+  {
+    "file": "re1ob_adservice_cpu_2/metrics.parquet",
+    "url": "https://huggingface.co/datasets/phamquiluan/RCAEval/resolve/afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/re1ob_adservice_cpu_2/metrics.parquet",
+    "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "bytes": 385594,
+    "sha256": "efc09980ca1386b6ace770364272201ef8eb055444f804cca9f0be8c15199483"
+  },
+  {
+    "file": "re1ob_adservice_cpu_3/metrics.parquet",
+    "url": "https://huggingface.co/datasets/phamquiluan/RCAEval/resolve/afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/re1ob_adservice_cpu_3/metrics.parquet",
+    "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "bytes": 338746,
+    "sha256": "5dad8369e838c7fdce505f443f1dd61fbe679748efa4be625dbeed6b8189feb5"
+  },
+  {
+    "file": "re1ob_adservice_cpu_4/metrics.parquet",
+    "url": "https://huggingface.co/datasets/phamquiluan/RCAEval/resolve/afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/re1ob_adservice_cpu_4/metrics.parquet",
+    "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "bytes": 396235,
+    "sha256": "ff0563caad1bcb902a1f68bef4b9ca4134aa031e526c57045b222e9c255e337c"
+  },
+  {
+    "file": "re1ob_adservice_cpu_5/metrics.parquet",
+    "url": "https://huggingface.co/datasets/phamquiluan/RCAEval/resolve/afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/re1ob_adservice_cpu_5/metrics.parquet",
+    "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "bytes": 386392,
+    "sha256": "3239c865f33c82fd6fa5a051b41a0e9e3cfd94a2b26ec65ed92f455be58ee43c"
+  },
+  {
+    "file": "re1ob_cartservice_cpu_1/metrics.parquet",
+    "url": "https://huggingface.co/datasets/phamquiluan/RCAEval/resolve/afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/re1ob_cartservice_cpu_1/metrics.parquet",
+    "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "bytes": 379137,
+    "sha256": "0f4df7e0eca4c9db7fcbdf2dab29065e14c3ed770c6a70d4a70b8784eb0c0199"
+  },
+  {
+    "file": "re1ob_cartservice_cpu_2/metrics.parquet",
+    "url": "https://huggingface.co/datasets/phamquiluan/RCAEval/resolve/afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/re1ob_cartservice_cpu_2/metrics.parquet",
+    "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "bytes": 377747,
+    "sha256": "796a22185159f8cb8b34279f77cd293546ed71a081825a0724976dc2aa7af8f9"
+  },
+  {
+    "file": "re1ob_cartservice_cpu_3/metrics.parquet",
+    "url": "https://huggingface.co/datasets/phamquiluan/RCAEval/resolve/afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/re1ob_cartservice_cpu_3/metrics.parquet",
+    "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "bytes": 384040,
+    "sha256": "1907ceaf88b12c22a5130d8e8943e65849acc412ab5b9456456163be9f381810"
+  },
+  {
+    "file": "re1ob_cartservice_cpu_4/metrics.parquet",
+    "url": "https://huggingface.co/datasets/phamquiluan/RCAEval/resolve/afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/re1ob_cartservice_cpu_4/metrics.parquet",
+    "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "bytes": 380210,
+    "sha256": "195aa8d4300385d185ac7e9838adfc55e004fa957c142cba680577d817cf192d"
+  },
+  {
+    "file": "re1ob_cartservice_cpu_5/metrics.parquet",
+    "url": "https://huggingface.co/datasets/phamquiluan/RCAEval/resolve/afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/re1ob_cartservice_cpu_5/metrics.parquet",
+    "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "bytes": 368806,
+    "sha256": "48e1c8e4bb4f0fb99a2b2198649d59b32f508d555e6d830725611f17300b116f"
+  },
+  {
+    "file": "re1ob_checkoutservice_cpu_1/metrics.parquet",
+    "url": "https://huggingface.co/datasets/phamquiluan/RCAEval/resolve/afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/re1ob_checkoutservice_cpu_1/metrics.parquet",
+    "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "bytes": 364727,
+    "sha256": "4590756f037b2ca254b8beb42247883c99712e83fd736d075ace7369bee1f692"
+  },
+  {
+    "file": "re1ob_checkoutservice_cpu_2/metrics.parquet",
+    "url": "https://huggingface.co/datasets/phamquiluan/RCAEval/resolve/afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/re1ob_checkoutservice_cpu_2/metrics.parquet",
+    "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "bytes": 547230,
+    "sha256": "91f2117fae29c11799dd54eaaf0651cb94bb205b1f07b44b173caff65dadab4c"
+  },
+  {
+    "file": "re1ob_checkoutservice_cpu_3/metrics.parquet",
+    "url": "https://huggingface.co/datasets/phamquiluan/RCAEval/resolve/afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/re1ob_checkoutservice_cpu_3/metrics.parquet",
+    "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "bytes": 363499,
+    "sha256": "ae46f67b57db52816c11dbc32e67672ecf4aac3c73361122e1cd00af379f9639"
+  },
+  {
+    "file": "re1ob_checkoutservice_cpu_4/metrics.parquet",
+    "url": "https://huggingface.co/datasets/phamquiluan/RCAEval/resolve/afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/re1ob_checkoutservice_cpu_4/metrics.parquet",
+    "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "bytes": 351398,
+    "sha256": "db2e52b3b5c623521274ee9e7c251f72090cafd9250dbac735f1f18f6efcf962"
+  },
+  {
+    "file": "re1ob_checkoutservice_cpu_5/metrics.parquet",
+    "url": "https://huggingface.co/datasets/phamquiluan/RCAEval/resolve/afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/re1ob_checkoutservice_cpu_5/metrics.parquet",
+    "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "bytes": 538701,
+    "sha256": "1216b2bca16c483357de8a6b7ecc5620f9163dba47a6b923d2d7c119f47c5dc0"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "dataset": "gaia",
+  "sources": [
+    {
+      "file": "pod-0.csv",
+      "sha256": "bc4f73402503f20207b9c99d22ea05256b43a5c84f11f1e41c98d6733332c85f"
+    },
+    {
+      "file": "pod-1.csv",
+      "sha256": "636fb34dfa8ca786d04958a10898155fd20f75ae62f717d511caa97751d22c86"
+    },
+    {
+      "file": "pod-2.csv",
+      "sha256": "4897434da62e8ed15386c7d95e500e57a566fd615bbe8fe70c55f1dd49a26f3d"
+    }
+  ],
+  "provenance": "fixture",
+  "availability": "retrospective unless source arrival column supplied"
+}

@@ -1,0 +1,22 @@
+{
+  "stage": "prepared",
+  "parent_hash": "cb2f2bf71c1ae9724d0c7bc79ce8fb62f4e4b6b6987066b6fa76c013a967c48e",
+  "dataset_version": "rcaeval-schema-fixture-v2",
+  "feature_version": "incident-candidate-v1",
+  "synthetic": true,
+  "feature_names": [
+    "metric_max_abs_z",
+    "metric_mean_abs_z",
+    "metric_ewma_z",
+    "metric_missing"
+  ],
+  "files": {
+    "cases.jsonl": "c77c3262890b57284bc17abc045abc0f35bfdaf9b4b54b135c524fe9ea703a27",
+    "config.json": "a7c27096667484302cca3e5cd1d41192d24413e948659568ff8ed10abb26a510",
+    "dq_report.json": "17193c34bdd796c83a9cb162dce3d1185621ac3bd2bc1f1532eb1ca3c5d41a2f",
+    "features.jsonl": "54996eb6095f96c95e30ce194464cd275d2d4394dd5957ea587a10bc5b26cc8d",
+    "splits.csv": "0cc96e04976ba177d4c08f39a6feec595d0da1cb3c460561d8eaded3d3a32c09"
+  },
+  "content_hash": "b425501f4bbe148d0cf25aba106fdbcd07806ba0a3e15ac40c9999d6fd686c60",
+  "created_at": "2026-09-30T18:36:02.059339+00:00"
+}

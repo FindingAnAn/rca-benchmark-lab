@@ -1,0 +1,13 @@
+﻿algorithm,seed,precision,recall,f1,ap,tp,fp,fn,n_windows,scope,false_alarms_per_hour,detection_delay_seconds,inference_seconds,threshold
+stat_mad,42,1.0,0.9166666666666666,0.9565217391304348,1.0,11,0,1,24,sampled incident/control windows; not continuous event detection,,,0.0031476999865844846,36.64291312441004
+stat_mad,123,1.0,0.9166666666666666,0.9565217391304348,1.0,11,0,1,24,sampled incident/control windows; not continuous event detection,,,0.0019792000530287623,36.64291312441004
+stat_mean_robust_z,42,1.0,1.0,1.0,1.0,12,0,0,24,sampled incident/control windows; not continuous event detection,,,0.002643299987539649,7.042459138273642
+stat_mean_robust_z,123,1.0,1.0,1.0,1.0,12,0,0,24,sampled incident/control windows; not continuous event detection,,,0.0017810999415814877,7.042459138273642
+ml_logistic,42,1.0,1.0,1.0,1.0,12,0,0,24,sampled incident/control windows; not continuous event detection,,,0.00575020001269877,0.3944477109915393
+ml_logistic,123,1.0,1.0,1.0,1.0,12,0,0,24,sampled incident/control windows; not continuous event detection,,,0.004534799954853952,0.8420256814847997
+ml_pca,42,1.0,0.9166666666666666,0.9565217391304348,1.0,11,0,1,24,sampled incident/control windows; not continuous event detection,,,0.005476200021803379,82.27720370575608
+ml_pca,123,1.0,0.9166666666666666,0.9565217391304348,1.0,11,0,1,24,sampled incident/control windows; not continuous event detection,,,0.003975500003434718,82.27720370575608
+dl_mlp,42,1.0,1.0,1.0,1.0,12,0,0,24,sampled incident/control windows; not continuous event detection,,,0.007530599948950112,0.9665068400549155
+dl_mlp,123,1.0,1.0,1.0,1.0,12,0,0,24,sampled incident/control windows; not continuous event detection,,,0.009545400040224195,0.9867083614959429
+dl_autoencoder,42,1.0,0.9166666666666666,0.9565217391304348,1.0,11,0,1,24,sampled incident/control windows; not continuous event detection,,,0.00910020002629608,88.32428652005862
+dl_autoencoder,123,1.0,0.8333333333333334,0.9090909090909091,1.0,10,0,2,24,sampled incident/control windows; not continuous event detection,,,0.010430799913592637,88.70856610548724

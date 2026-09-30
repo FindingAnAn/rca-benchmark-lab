@@ -1,0 +1,11 @@
+{
+  "dataset": "lemma",
+  "sources": [
+    {
+      "file": "metrics.json",
+      "sha256": "13c6ccbe41d797b037a69e1a3225ada9e3d0f34ed3a8612525ac17599fb8fd2b"
+    }
+  ],
+  "provenance": "fixture",
+  "availability": "retrospective unless source arrival column supplied"
+}

@@ -1,0 +1,8 @@
+{
+  "archive_isolation_tests_exit": 0,
+  "artifact_audit_exit": 0,
+  "tests": 34,
+  "environment": "bundled Python + NumPy; no .deps or v1 on module path",
+  "test_summary": "sts.test_typed_topology_semantics_and_asof) ... ok\n\n----------------------------------------------------------------------\nRan 34 tests in 6.147s\n\nOK\n",
+  "artifact_audit": "{'status': 'PASS', 'snapshots': 22, 'lifecycle_runs': 8, 'public_files': 22, 'live_integrations_verified': False, 'official_rcaeval_methods_executed': False, 'production_ready': False}"
+}

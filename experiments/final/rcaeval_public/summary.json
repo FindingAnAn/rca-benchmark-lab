@@ -1,0 +1,16 @@
+{
+  "status": "COMPLETED",
+  "dataset": "rcaeval",
+  "provenance": "public_subset",
+  "task": "root_entity_ranking",
+  "algorithms": [
+    "stat_mad",
+    "stat_ewma",
+    "ml_logistic",
+    "ml_pca",
+    "dl_mlp",
+    "dl_autoencoder"
+  ],
+  "production_allowed": false,
+  "trace_use": "archived only; trace features not enabled in v2"
+}

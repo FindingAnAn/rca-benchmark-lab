@@ -1,0 +1,22 @@
+{
+  "stage": "prepared",
+  "parent_hash": "4e83c0d9bed1bfa140a214cc78fed14526a3981c4814d5dd540612c2145eaf95",
+  "dataset_version": "rcaeval-re1ob-cpu-resource-public-v2",
+  "feature_version": "incident-candidate-v1",
+  "synthetic": false,
+  "feature_names": [
+    "metric_max_abs_z",
+    "metric_mean_abs_z",
+    "metric_ewma_z",
+    "metric_missing"
+  ],
+  "files": {
+    "cases.jsonl": "4f51b66e45a1fb2f16d3f0db2b630d7f53cd544127c679b0177eeb680d91e5fb",
+    "config.json": "3260695463d57236fdfc2b344d2bbb9c786fa3a77f258011be66cd21a2167d8c",
+    "dq_report.json": "e11dbb0ac4ebe5976eaf7b426c9dc04200722878a406288c7afa23a670bb2c80",
+    "features.jsonl": "fa0523c0c29dd029b767b73c387309e5ecac786858360eed136be6e538d223d6",
+    "splits.csv": "c199fa0bda3db7de790a329540610ec1e8b6619572228524f22ab52409e7de57"
+  },
+  "content_hash": "621d93f08f36c28c27d481337ada450bfd91ef52c90214277847587843c118e3",
+  "created_at": "2026-09-30T18:47:16.892398+00:00"
+}

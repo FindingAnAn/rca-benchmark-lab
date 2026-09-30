@@ -1,0 +1,22 @@
+{
+  "stage": "prepared",
+  "parent_hash": "50a78824fc753e1f37e8410dfef7a89db4dbdb1d985d7f364d308f276c9347b2",
+  "dataset_version": "gaia-schema-fixture-v2",
+  "feature_version": "incident-candidate-v1",
+  "synthetic": true,
+  "feature_names": [
+    "metric_max_abs_z",
+    "metric_mean_abs_z",
+    "metric_ewma_z",
+    "metric_missing"
+  ],
+  "files": {
+    "cases.jsonl": "c77c3262890b57284bc17abc045abc0f35bfdaf9b4b54b135c524fe9ea703a27",
+    "config.json": "add9b63aef41c2aa54d15362c883d312f6477d070e8ccb10dbf1c22ec82662a9",
+    "dq_report.json": "17193c34bdd796c83a9cb162dce3d1185621ac3bd2bc1f1532eb1ca3c5d41a2f",
+    "features.jsonl": "54996eb6095f96c95e30ce194464cd275d2d4394dd5957ea587a10bc5b26cc8d",
+    "splits.csv": "0cc96e04976ba177d4c08f39a6feec595d0da1cb3c460561d8eaded3d3a32c09"
+  },
+  "content_hash": "f3f9e4d2a9262a52a6cc30e545646edb8e61bc94a62edf67d70870956db7433e",
+  "created_at": "2026-09-30T18:47:05.851173+00:00"
+}
