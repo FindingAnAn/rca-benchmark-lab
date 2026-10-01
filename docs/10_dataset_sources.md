@@ -17,4 +17,4 @@ LEMMA preprocessed tách metric và unstructured log theo pod; không mặc đ�
 
 File `download_manifest.json` lưu URL pin, byte count, SHA256. RCAEval conversion manifest ghi file đầu vào, phép đổi sang 30s mean resource metrics và SHA đầu ra. File trong gói trích đoạn có chọn lọc, không đại diện phân phối đầy đủ và không phải bản mirror chính thức.
 
-Không đưa các DOCX nội bộ, nội dung notebook nội bộ hoặc credential vào download request. Gói lab không sao chép các tài liệu nội bộ gốc. Nguồn hình ảnh trong shared chat không truy cập được nên không được ghi là đã kiểm chứng.
+Không đưa các DOCX nội bộ, nội dung notebook nội bộ hoặc credential vào download request. Gói lab không sao chép các tài liệu nội bộ gốc. Ảnh trong shared chat không đọc được ở lượt đầu; lượt bổ sung đã đọc trực tiếp 15 ảnh do người dùng đính kèm, ghi nhận tại docs/11_image_evidence.md.

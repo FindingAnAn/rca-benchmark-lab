@@ -11,6 +11,13 @@ from rca_bench.data import temporal_split
 
 
 class LabTests(unittest.TestCase):
+    def test_namespace_cannot_contain_node(self):
+        from integrations.mano import validate_inventory
+        entities=[dict(entity_id='ns',entity_type='namespace'),dict(entity_id='n',entity_type='node')]
+        edges=[dict(source='ns',target='n',relation='contains',valid_from=0,valid_to=10,available_at=0)]
+        with self.assertRaisesRegex(ValueError,'Namespace'):
+            validate_inventory(entities,edges)
+
     def metric(self,t,value,kind='counter',capture='a'):
         return dict(timestamp=t,value=value,kind=kind,unit='requests',series_id='x',capture_id=capture,available_at=t)
 

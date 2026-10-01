@@ -1,6 +1,6 @@
 # Mapping MANO/OCS và giới hạn suy luận
 
-Thông tin dùng: mô tả người dùng, nội dung text chat chia sẻ `base_rca`, ba tài liệu trong `RCA/` đã khảo sát ở v1, notebook viễn thông và cấu trúc yêu cầu. Ảnh upload trong shared chat không hiển thị nội dung để kiểm chứng. Tần suất APP 10s/DB 20s/container 40s/server 60s từ text chat là giả định cần đối chiếu export thật, chưa hard-code vào pipeline.
+Thông tin dùng: mô tả người dùng, nội dung text chat chia sẻ `base_rca`, ba tài liệu trong `RCA/` đã khảo sát ở v1, notebook viễn thông và 15 ảnh người dùng bổ sung. Đã đọc ảnh trực tiếp; xem [đối chiếu ảnh](11_image_evidence.md). Chu kỳ APP 10s/DB 20s/container 40s/server 60s xuất hiện trong bảng demo, vẫn cần đối chiếu scrape/export thật và không hard-code vào public pipeline.
 
 ```mermaid
 flowchart TD

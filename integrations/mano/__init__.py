@@ -1,7 +1,7 @@
 """Typed, time-versioned MANO/Kubernetes relationships; no automatic remediation."""
 
 RELATIONS={'contains','hosts','member_of','calls','depends_on'}
-ENTITY_TYPES={'mano','site','vim','cluster','cnf','vnf','vdu','cnfc','vnfc','pod','container','node','service','database'}
+ENTITY_TYPES={'mano','site','vim','cluster','namespace','deployment','statefulset','configmap','endpoint','proxy','loadbalancer','cnf','vnf','vdu','cnfc','vnfc','pod','container','node','service','database'}
 
 
 def validate_inventory(entities,edges):
@@ -13,6 +13,10 @@ def validate_inventory(entities,edges):
         if edge['relation'] not in RELATIONS: raise ValueError('Unknown relationship')
         if edge['source'] not in by_id or edge['target'] not in by_id: raise ValueError('Orphan edge')
         if edge['valid_from']>=edge['valid_to']: raise ValueError('Invalid topology interval')
+        source_type=by_id[edge['source']]['entity_type']
+        target_type=by_id[edge['target']]['entity_type']
+        if source_type=='namespace' and target_type=='node' and edge['relation']=='contains':
+            raise ValueError('Namespace does not contain nodes')
         if edge['relation']=='hosts' and by_id[edge['source']]['entity_type']!='node':
             raise ValueError('hosts relation must originate at node')
     return True

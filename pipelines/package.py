@@ -6,7 +6,7 @@ import zipfile
 
 def main():
     root=Path(__file__).resolve().parents[1]
-    target=root.parent/'rca-benchmark-lab-v2.zip'
+    target=root.parent/'rca-benchmark-lab-v3.zip'
     excluded={'.deps','.venv','__pycache__','wheelhouse','.git'}
     files=[]
     import os

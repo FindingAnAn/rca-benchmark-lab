@@ -12,6 +12,7 @@ def main():
     p.add_argument('--input',required=True)
     p.add_argument('--output',required=True)
     p.add_argument('--config',required=True)
+    p.add_argument('--include-app',action='store_true',help='Include upstream preprocessed load/latency/error proxies; do not infer original counter units')
     args=p.parse_args()
     import pyarrow.parquet as pq
     source=Path(args.input).resolve()
@@ -21,6 +22,8 @@ def main():
     bench=read_json('configs/rcaeval_fixture.json')['benchmark']
     bench.update(dataset_version='rcaeval-re1ob-cpu-resource-public-v2',step_seconds=30,
                  label_tiers=['public_injection'],split_protocol='campaign_holdout',min_metric_coverage=.7)
+    if args.include_app:
+        bench['dataset_version']='rcaeval-re1ob-cpu-app-resource-public-v3'
     cases,specs,lineage=[],[],[]
     services=('adservice','cartservice','checkoutservice')
     for item in catalog:
@@ -34,6 +37,12 @@ def main():
                           unit='source_cpu_unit' if name.endswith('_cpu') else 'bytes',layer='CONTAINER')
                  for name in data[0] if name.endswith(('_cpu','_mem'))}
         candidates=sorted({m['entity'] for m in columns.values()})
+        if args.include_app:
+            for name in data[0]:
+                entity,_,suffix=name.rpartition('_')
+                if suffix in ('load','latency','error') and entity in candidates:
+                    columns[name]=dict(entity=entity,metric=name,kind='gauge',
+                        unit='upstream_preprocessed_'+suffix,layer='APP')
         groups=defaultdict(list)
         for row in data:
             groups[math.ceil(row['time']/30)*30].append(row)
@@ -44,7 +53,7 @@ def main():
                     for ts,rs in sorted(groups.items())]
         write_csv(out/f'{capture}.csv',aggregated)
         lineage.append(dict(file=str(path.relative_to(source)),sha256=file_hash(path),
-                            transformation='right-labelled 30s mean; CPU/memory columns only',
+                            transformation='right-labelled 30s observed mean; resource'+(' and APP proxies' if args.include_app else '') ,
                             output=f'{capture}.csv',output_sha256=file_hash(out/f'{capture}.csv')))
         specs.append(dict(file=f'{capture}.csv',modality='metric',time_column='time',time_unit='s',
                           capture_id=capture,columns=columns))

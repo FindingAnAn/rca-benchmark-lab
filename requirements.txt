@@ -1,0 +1,2 @@
+# Core offline execution, validated with Python 3.12 on Windows x64.
+numpy==2.3.5

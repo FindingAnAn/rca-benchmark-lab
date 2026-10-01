@@ -7,7 +7,7 @@ Máy staging có Internet được phép tải public dataset/wheel. Máy công 
 Core dùng NumPy. Trên máy staging cùng phiên bản Python/Windows với máy đích:
 
 ```powershell
-python -m pip download --only-binary=:all: --dest wheelhouse numpy==2.2.6
+python -m pip download --only-binary=:all: --dest wheelhouse numpy==2.3.5
 Get-ChildItem wheelhouse -File | Get-FileHash -Algorithm SHA256 | Export-Csv wheelhouse-sha256.csv -NoTypeInformation
 ```
 
@@ -15,7 +15,7 @@ Trên máy công ty, sau kiểm tra wheel:
 
 ```powershell
 python -m venv .venv
-.venv\Scripts\python -m pip install --no-index --find-links wheelhouse numpy==2.2.6
+.venv\Scripts\python -m pip install --no-index --find-links wheelhouse numpy==2.3.5
 .venv\Scripts\python -m unittest discover -s tests -v
 .venv\Scripts\python -m pipelines.run --config configs/rcaeval_public.json --output experiments/offline_rca
 ```
