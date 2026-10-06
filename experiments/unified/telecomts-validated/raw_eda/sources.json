@@ -1,0 +1,26 @@
+[
+  {
+    "file": "File-normal.jsonl",
+    "sha256": "bcf13ce1b5b1003ea863cea22257e850ad9103110857602e2e6557d3217d5c29"
+  },
+  {
+    "file": "File-jammer.jsonl",
+    "sha256": "7845dfff4b408bc216ddf213e8c1c0a55deadb07fc3516d9d9be3f252a21afeb"
+  },
+  {
+    "file": "Twitch-normal.jsonl",
+    "sha256": "37e3b3c25d323ade1242edb064b30bc40338438a9496be52da212003e46ebc54"
+  },
+  {
+    "file": "Twitch-jammer.jsonl",
+    "sha256": "378d973656df1bbd94f98ece2a7a7f4ef3a705b522bc7204ee374dec166f2843"
+  },
+  {
+    "file": "YouTube-normal.jsonl",
+    "sha256": "fb633d1b7f50a67ff3058845611dd4cf7436f37f85941751c2787af00fa5ed4f"
+  },
+  {
+    "file": "YouTube-jammer.jsonl",
+    "sha256": "62a33a91dbbaea34034d0173f86308801f6d9ec9ada1c4bb4242d849c1363caa"
+  }
+]

@@ -1,0 +1,2 @@
+{"available_at":1.0,"call_id":"0.1","duration_ms":13.0,"modality":"call","observation_side":"caller","rpc_type":"rpc","source":"svc-a","target":"svc-b","timestamp":1.0,"trace_id":"trace-1"}
+{"available_at":1.0,"call_id":"0.1","duration_ms":10.0,"modality":"call","observation_side":"callee","rpc_type":"rpc","source":"svc-a","target":"svc-b","timestamp":1.0,"trace_id":"trace-1"}

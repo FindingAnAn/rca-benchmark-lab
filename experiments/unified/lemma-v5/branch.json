@@ -1,0 +1,5 @@
+{
+  "kind": "public",
+  "config": "configs/lemma_fixture.json",
+  "provenance": "schema_fixture_only"
+}

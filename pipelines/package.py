@@ -6,8 +6,8 @@ import zipfile
 
 def main():
     root=Path(__file__).resolve().parents[1]
-    target=root.parent/'rca-benchmark-lab-v3.zip'
-    excluded={'.deps','.venv','__pycache__','wheelhouse','.git'}
+    target=root.parent/'rca-benchmark-lab-unified-v5.zip'
+    excluded={'.deps','.eda_deps','.venv','__pycache__','wheelhouse','.git'}
     files=[]
     import os
     for current,dirs,names in os.walk(root):
@@ -15,6 +15,10 @@ def main():
         for name in names:
             p=Path(current)/name
             rel=p.relative_to(root)
+            if rel.parts[:2]==('data','internal'):continue
+            if rel.parts[0]=='experiments' and len(rel.parts)>1 and rel.parts[1]!='unified':continue
+            if rel.parts[:2]==('experiments','unified') and len(rel.parts)>2 and rel.parts[2].endswith('-validated'):continue
+            if name.startswith('my_') or name.startswith('.env'):continue
             if p.suffix in ('.pyc','.tmp'):continue
             if rel.parts[:3] in (('data','public','rcaeval_csv'),('data','public','rcaeval'),('data','public','telecomts')):continue
             files.append(p)

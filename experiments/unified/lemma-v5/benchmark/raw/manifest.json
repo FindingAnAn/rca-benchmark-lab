@@ -1,0 +1,20 @@
+{
+  "stage": "raw",
+  "dataset_version": "lemma-schema-fixture-v2",
+  "synthetic": true,
+  "files": {
+    "call.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changes.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "incidents.jsonl": "2c1a5469aa53a45ba90127a9f59a5a4e885eccd9ee2a9fb8c3f9be6037caef1b",
+    "labels_provenance.json": "50e8ef18009827eeca9c4959782d7c47dc57561e9ac3a2aff4ea4e449f747bae",
+    "log.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "metric.jsonl": "c58063e72c59274397138d8d46a575d2153b76eae155043fc5b49dd22758136b",
+    "metrics.csv": "149463865bc259b69980558ae882d1782e78fdd3242bb2189462a0fe403cec10",
+    "source.json": "24e653acd46292723cb828f2b65cb0e10d9fe16dcf95e4e766ac08244cf1d8de",
+    "topology.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "trace.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "content_hash": "03460705346a780ea2d9761c42a40c6b6c66a8facb7595cf159256c9e050cd1b",
+  "created_at": "2026-10-06T17:42:51.949636+00:00"
+}

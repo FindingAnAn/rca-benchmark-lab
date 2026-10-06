@@ -1,0 +1,40 @@
+{
+  "dataset": "local_telemetry",
+  "input_root": "../inputs/demo",
+  "reference_end": 1700001200,
+  "max_rows": 500000,
+  "sources": [
+    {
+      "file": "telemetry.csv",
+      "layout": "long",
+      "time_column": "timestamp",
+      "time_unit": "s",
+      "entity_column": "pod",
+      "metric_column": "metric",
+      "value_column": "value",
+      "labels": {
+        "namespace": "namespace"
+      }
+    }
+  ],
+  "metric_contract": {
+    "cpu_cores": {
+      "kind": "gauge",
+      "unit": "cores",
+      "minimum": 0,
+      "cadence_seconds": 10
+    },
+    "latency_ms": {
+      "kind": "gauge",
+      "unit": "ms",
+      "minimum": 0,
+      "cadence_seconds": 10
+    },
+    "request_total": {
+      "kind": "counter",
+      "unit": "requests",
+      "minimum": 0,
+      "cadence_seconds": 10
+    }
+  }
+}

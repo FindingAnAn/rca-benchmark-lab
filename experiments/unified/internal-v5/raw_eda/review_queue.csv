@@ -1,0 +1,8 @@
+﻿series,capture,sample,timestamp,observed_value,robust_z,existing_label,reason,reviewer,review_status,confirmed_cause,label_confidence,comment
+"[""pod-a"", ""cpu_cores"", {""namespace"": ""demo-ocs""}]",local,telemetry.csv:547,1700001820.0,1.341539610581075,56.0144225400323,unlabelled,large_deviation_not_proof_of_bad_data,,pending,,,
+"[""pod-a"", ""cpu_cores"", {""namespace"": ""demo-ocs""}]",local,telemetry.csv:535,1700001780.0,1.3264132331105634,55.200099408134086,unlabelled,large_deviation_not_proof_of_bad_data,,pending,,,
+"[""pod-a"", ""cpu_cores"", {""namespace"": ""demo-ocs""}]",local,telemetry.csv:541,1700001800.0,1.3222918488915476,54.97822615979505,unlabelled,large_deviation_not_proof_of_bad_data,,pending,,,
+"[""pod-a"", ""latency_ms"", {""namespace"": ""demo-ocs""}]",local,telemetry.csv:212,1700000700.0,,,unlabelled,nonfinite,,pending,,,
+"[""pod-b"", ""latency_ms"", {""namespace"": ""demo-ocs""}]",local,telemetry.csv:932,1700000700.0,,,unlabelled,nonfinite,,pending,,,
+"[""pod-b"", ""latency_ms"", {""namespace"": ""demo-ocs""}]",local,telemetry.csv:1262,1700001800.0,121.08518892658392,48.738207987496764,unlabelled,large_deviation_not_proof_of_bad_data,,pending,,,
+"[""pod-c"", ""latency_ms"", {""namespace"": ""demo-ocs""}]",local,telemetry.csv:1652,1700000700.0,,,unlabelled,nonfinite,,pending,,,

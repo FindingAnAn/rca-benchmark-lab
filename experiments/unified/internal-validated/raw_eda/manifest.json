@@ -1,0 +1,31 @@
+{
+  "stage": "eda_diagnostic",
+  "config_sha256": "664ee0a9c71e3291907518dab70ae840b32553e76a2827656b4790cf8d423c06",
+  "automatic_changes": false,
+  "code_hashes": {
+    "eda.py": "4f5f606555e232175877fa1956897191ba5e50f5da537c552482638db1f249e8",
+    "feature_catalog.py": "43626008a47937a4965b93d9eedaf7b6bb43e72f23b99872015a73acf24d92ee",
+    "io.py": "b88268bc56a7f060d0f8e13f677165afbc75a5ca57eff68d27d684fce74fd415",
+    "local.py": "f2fef3ad6f1a74d8f09c23a691c87810ec34cc0cafc3235bfad45137e21f732f",
+    "make_demo.py": "34b5a6be53a610f0e37cc3721c949450166dc70b25343d8d2c6945f1154f078b",
+    "package.py": "b1e888a396ec824a6d6eeead47935426fb35fe6550f97b31bca89ae6e0a6475c",
+    "readers.py": "b8fc6d9f96fb8f7895a4dad58206e1708508690be3f8fc9cc2ecbe1287b72c9c",
+    "verify.py": "84a786ad0f3f4f99f4edf92ddee9aa6acb8052bb0afd513ebe20dbbe502822a5",
+    "__init__.py": "8db6f05cd87d695db14dafa5d8f0d14875852f056e0bd613d27cbdf2ef1e87f2"
+  },
+  "files": {
+    "config.json": "664ee0a9c71e3291907518dab70ae840b32553e76a2827656b4790cf8d423c06",
+    "contrast.png": "ae870de71527001093737674d8379f706ac29785c5a0fa7b9ebcb8bbc5ceb0e9",
+    "data_issues.csv": "bd6bf1dd4d0b52697dd61c63d8ab48ee22f1bee40175ee00a1d5e6320190a141",
+    "data_quality.json": "84e6afde8a726e32de51eb8c3402f45c705eb1d7c4d06334b95a1bd142ed0ce8",
+    "distribution_window.png": "2b589aa72ca6b0d0b3bdc4b72d062a11c0a84567138815288962f04272521c00",
+    "outliers.png": "91cac11f92b0b142301f535d4d8333c03919c5aec6aaa6a5fbdb976143b9f7d5",
+    "profiles.csv": "e197fd40c35f2e7a32965eac99f7861dcd412631675765176956990d3e6fd1c3",
+    "report.html": "d1759a49e4ede5298a7977aab7ee2b9d0da8541879fa86569fcfbb1248c8f68f",
+    "review_queue.csv": "875b8f4d25ce66ac4f9d2bfec2c456f4792dc7db6dbc1b86dd971a4ecde4cc06",
+    "sources.json": "3a58457b919b9d86734af4fe49385cf5f72719f89614a453ba69c9f455decdd8",
+    "summary.json": "3f3fb262f756b22a41cb4f9cd628f9b4ce0be4aeed234d19439572c63469d6ba"
+  },
+  "content_hash": "974eeb60abe2e1731ff9d32f3e51d9f5779bcbd632749232be5f2dee8d6bc33c",
+  "created_at": "2026-10-06T17:34:09.845758+00:00"
+}

@@ -1,0 +1,32 @@
+﻿index,feature
+0,cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/amount_coverage
+1,cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/cdr_count
+2,cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/charge_mean
+3,cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/charge_sum
+4,cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/fail_rate
+5,cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/failure_count
+6,cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/late_rate
+7,cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/negative_charge_rate
+8,cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/result_coverage
+9,cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/success_count
+10,cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/zero_charge_rate
+11,cdr/demo/demo-ocs/CDR_Recurring_success/unknown/amount_coverage
+12,cdr/demo/demo-ocs/CDR_Recurring_success/unknown/cdr_count
+13,cdr/demo/demo-ocs/CDR_Recurring_success/unknown/charge_mean
+14,cdr/demo/demo-ocs/CDR_Recurring_success/unknown/charge_sum
+15,cdr/demo/demo-ocs/CDR_Recurring_success/unknown/fail_rate
+16,cdr/demo/demo-ocs/CDR_Recurring_success/unknown/failure_count
+17,cdr/demo/demo-ocs/CDR_Recurring_success/unknown/late_rate
+18,cdr/demo/demo-ocs/CDR_Recurring_success/unknown/negative_charge_rate
+19,cdr/demo/demo-ocs/CDR_Recurring_success/unknown/result_coverage
+20,cdr/demo/demo-ocs/CDR_Recurring_success/unknown/success_count
+21,cdr/demo/demo-ocs/CDR_Recurring_success/unknown/zero_charge_rate
+22,"cpu_cores|[""pod-a"", ""cpu_cores"", {""namespace"": ""demo-ocs""}]"
+23,"cpu_cores|[""pod-b"", ""cpu_cores"", {""namespace"": ""demo-ocs""}]"
+24,"cpu_cores|[""pod-c"", ""cpu_cores"", {""namespace"": ""demo-ocs""}]"
+25,"latency_ms|[""pod-a"", ""latency_ms"", {""namespace"": ""demo-ocs""}]"
+26,"latency_ms|[""pod-b"", ""latency_ms"", {""namespace"": ""demo-ocs""}]"
+27,"latency_ms|[""pod-c"", ""latency_ms"", {""namespace"": ""demo-ocs""}]"
+28,"request_total_rate|[""pod-a"", ""request_total"", {""namespace"": ""demo-ocs""}]"
+29,"request_total_rate|[""pod-b"", ""request_total"", {""namespace"": ""demo-ocs""}]"
+30,"request_total_rate|[""pod-c"", ""request_total"", {""namespace"": ""demo-ocs""}]"

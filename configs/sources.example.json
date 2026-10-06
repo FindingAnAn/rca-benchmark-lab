@@ -9,8 +9,16 @@
     "chunk_seconds": 1800,
     "timeout_seconds": 30,
     "queries": [
-      {"name": "cpu_usage", "promql": "avg by (entity_id) (rate(container_cpu_usage_seconds_total{namespace=\"YOUR_NAMESPACE\"}[5m]))", "kind": "rate"},
-      {"name": "memory_bytes", "promql": "sum by (entity_id) (container_memory_working_set_bytes{namespace=\"YOUR_NAMESPACE\"})", "kind": "gauge"}
+      {
+        "name": "cpu_usage",
+        "promql": "avg by (entity_id) (rate(container_cpu_usage_seconds_total{namespace=\"YOUR_NAMESPACE\"}[5m]))",
+        "kind": "rate"
+      },
+      {
+        "name": "memory_bytes",
+        "promql": "sum by (entity_id) (container_memory_working_set_bytes{namespace=\"YOUR_NAMESPACE\"})",
+        "kind": "gauge"
+      }
     ]
   },
   "elasticsearch": {
@@ -20,7 +28,16 @@
     "timeout_seconds": 30,
     "page_size": 1000,
     "max_pages": 1000,
-    "filter": {"term": {"namespace.keyword": "YOUR_NAMESPACE"}},
-    "fields": {"timestamp": "@timestamp", "entity_id": "entity_id", "level": "log.level", "template_id": "event.code"}
+    "filter": {
+      "term": {
+        "namespace.keyword": "YOUR_NAMESPACE"
+      }
+    },
+    "fields": {
+      "timestamp": "@timestamp",
+      "entity_id": "entity_id",
+      "level": "log.level",
+      "template_id": "event.code"
+    }
   }
 }

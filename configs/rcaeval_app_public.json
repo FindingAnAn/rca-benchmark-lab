@@ -1,6 +1,6 @@
 {
   "dataset": "rcaeval",
-  "input_root": "..\\data\\public\\rcaeval_app_csv",
+  "input_root": "../data/public/rcaeval_app_csv",
   "task": "root_entity_ranking",
   "provenance": "public_subset",
   "cases_file": "cases.jsonl",

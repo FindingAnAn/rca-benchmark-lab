@@ -1,0 +1,22 @@
+{
+  "stage": "prepared",
+  "parent_hash": "0298c2ba54b94cba3d8093a93ed79e1fc0acd2fb1411fe8817ccabce0727bac2",
+  "dataset_version": "aiops2020-schema-fixture-v2",
+  "feature_version": "incident-candidate-v1",
+  "synthetic": true,
+  "feature_names": [
+    "metric_max_abs_z",
+    "metric_mean_abs_z",
+    "metric_ewma_z",
+    "metric_missing"
+  ],
+  "files": {
+    "cases.jsonl": "c77c3262890b57284bc17abc045abc0f35bfdaf9b4b54b135c524fe9ea703a27",
+    "config.json": "7ae338fa1fc2a307fc5ca8e89b3f94f20d9c54a7822dbb23335e92edf1f6348f",
+    "dq_report.json": "17193c34bdd796c83a9cb162dce3d1185621ac3bd2bc1f1532eb1ca3c5d41a2f",
+    "features.jsonl": "54996eb6095f96c95e30ce194464cd275d2d4394dd5957ea587a10bc5b26cc8d",
+    "splits.csv": "0cc96e04976ba177d4c08f39a6feec595d0da1cb3c460561d8eaded3d3a32c09"
+  },
+  "content_hash": "a9d2915f3bebaa4ae69dab7a453e391243056aec23f58e5afe616219c62159a5",
+  "created_at": "2026-10-06T17:42:58.282026+00:00"
+}

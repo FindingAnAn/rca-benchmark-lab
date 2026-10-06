@@ -1,0 +1,48 @@
+{
+  "algorithm": "ml_logistic",
+  "task": "candidate entity ranking",
+  "dataset_hash": "a6660455133ab7c1a89a349d04f19b01d1cf0dae2cbdaf9716e8df908c88a2ad",
+  "feature_names": [
+    "metric_max_abs_z",
+    "metric_mean_abs_z",
+    "metric_ewma_z",
+    "metric_missing"
+  ],
+  "selected": {
+    "index": 0,
+    "params": {
+      "lr": 0.02,
+      "epochs": 80,
+      "l2": 0.001
+    },
+    "seeds": [
+      {
+        "seed": 42,
+        "path": "models\\ml_logistic-c0-s42.json",
+        "validation_mrr": 1.0,
+        "threshold": 0.9819817365915499,
+        "fit_seconds": 0.07080920017324388
+      }
+    ],
+    "validation_mrr": 1.0
+  },
+  "intended_use": "offline/shadow support",
+  "limitations": [
+    "ranking is not causal proof",
+    "statistical/unsupervised models rank abnormal entities, which can be downstream symptoms",
+    "evidence is supporting telemetry, not a neural attribution or calibrated causal probability"
+  ],
+  "lifecycle": {
+    "checks": {
+      "hit3": true,
+      "mrr": true,
+      "candidate_coverage": true,
+      "latency": true,
+      "evidence": true,
+      "failures": true
+    },
+    "decision": "DEMO_ONLY",
+    "production_allowed": false,
+    "reason": "Offline gates do not authorize production promotion"
+  }
+}

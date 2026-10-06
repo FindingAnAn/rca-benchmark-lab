@@ -1,0 +1,20 @@
+{
+  "stage": "raw",
+  "dataset_version": "rcaeval-re1ob-cpu-app-resource-public-v3",
+  "synthetic": false,
+  "files": {
+    "call.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "changes.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "incidents.jsonl": "2b9e539c843f1c8984e67d2819388648947c7bab6002df1aab8fca4a5ef1ab69",
+    "labels_provenance.json": "303331a82eb7bdaf57466d3c98d94ad580cd5653fe70066626c7e96eed861840",
+    "log.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "logs.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "metric.jsonl": "06392196c5e2b1ea3e9d6c72b7331b2729c3ba1f03238d03db37957040bdf1ad",
+    "metrics.csv": "484128f611c66b46a20826fbea91c13f756f1d70de3c1cfd039a0b66522ca932",
+    "source.json": "d454b6f82a989cdb886204a2b07ebdaf4b2b5ad5f35397cc416e9982071417ac",
+    "topology.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "trace.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "content_hash": "c601c724e3bd6c6c281e87d8ab00652310db79dda4fc5926d80b8f98fa0b1eda",
+  "created_at": "2026-10-06T00:25:00.259371+00:00"
+}

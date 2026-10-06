@@ -1,0 +1,9 @@
+﻿feature,label,n,median
+metric_ewma_z,0,115,1.9039456324060429
+metric_max_abs_z,0,115,3.8328325343486966
+metric_mean_abs_z,0,115,1.810801745232664
+metric_missing,0,115,0.1428571428571429
+metric_ewma_z,1,5,83.19207692980146
+metric_max_abs_z,1,5,100.0
+metric_mean_abs_z,1,5,83.33638454281132
+metric_missing,1,5,0.1428571428571429

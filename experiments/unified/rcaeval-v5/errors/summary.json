@@ -1,0 +1,33 @@
+{
+  "algorithms": {
+    "dl_autoencoder": {
+      "TP": 10,
+      "TN": 10
+    },
+    "dl_mlp": {
+      "TP": 10,
+      "TN": 10
+    },
+    "ml_logistic": {
+      "TP": 10,
+      "TN": 10
+    },
+    "ml_pca": {
+      "TP": 10,
+      "TN": 10
+    },
+    "stat_ewma": {
+      "TP": 10,
+      "TN": 10
+    },
+    "stat_mad": {
+      "TP": 10,
+      "TN": 8,
+      "FP": 2
+    }
+  },
+  "review_rows": 2,
+  "unit": "case-model-seed predictions; rows across seeds are not independent incidents",
+  "limits": "Mistakes are relative to supplied labels. A suspected label error requires BA/SME adjudication. No automatic correction.",
+  "test_usage": "post-evaluation error diagnosis; freeze test and use new holdout for subsequent model selection"
+}

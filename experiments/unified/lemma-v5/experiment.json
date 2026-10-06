@@ -1,0 +1,8 @@
+{
+  "branch": "lemma",
+  "profile": "efficient",
+  "status": "COMPLETED",
+  "seconds": 2.8424869999289513,
+  "provenance": "schema_fixture_only",
+  "feature_eda": "post-freeze diagnostics; test must not guide tuning"
+}

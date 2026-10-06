@@ -1,0 +1,32 @@
+﻿feature,label,n,median
+cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/amount_coverage,unlabelled,15,0.0
+cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/cdr_count,unlabelled,15,30.0
+cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/charge_mean,unlabelled,0,
+cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/charge_sum,unlabelled,0,
+cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/fail_rate,unlabelled,15,1.0
+cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/failure_count,unlabelled,15,30.0
+cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/late_rate,unlabelled,15,0.0
+cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/negative_charge_rate,unlabelled,0,
+cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/result_coverage,unlabelled,15,1.0
+cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/success_count,unlabelled,15,0.0
+cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/zero_charge_rate,unlabelled,0,
+cdr/demo/demo-ocs/CDR_Recurring_success/unknown/amount_coverage,unlabelled,15,0.0
+cdr/demo/demo-ocs/CDR_Recurring_success/unknown/cdr_count,unlabelled,15,30.0
+cdr/demo/demo-ocs/CDR_Recurring_success/unknown/charge_mean,unlabelled,0,
+cdr/demo/demo-ocs/CDR_Recurring_success/unknown/charge_sum,unlabelled,0,
+cdr/demo/demo-ocs/CDR_Recurring_success/unknown/fail_rate,unlabelled,15,0.0
+cdr/demo/demo-ocs/CDR_Recurring_success/unknown/failure_count,unlabelled,15,0.0
+cdr/demo/demo-ocs/CDR_Recurring_success/unknown/late_rate,unlabelled,15,0.0
+cdr/demo/demo-ocs/CDR_Recurring_success/unknown/negative_charge_rate,unlabelled,0,
+cdr/demo/demo-ocs/CDR_Recurring_success/unknown/result_coverage,unlabelled,15,1.0
+cdr/demo/demo-ocs/CDR_Recurring_success/unknown/success_count,unlabelled,15,30.0
+cdr/demo/demo-ocs/CDR_Recurring_success/unknown/zero_charge_rate,unlabelled,0,
+"cpu_cores|[""pod-a"", ""cpu_cores"", {""namespace"": ""demo-ocs""}]",unlabelled,5,0.301277584071212
+"cpu_cores|[""pod-b"", ""cpu_cores"", {""namespace"": ""demo-ocs""}]",unlabelled,5,0.2961372715534007
+"cpu_cores|[""pod-c"", ""cpu_cores"", {""namespace"": ""demo-ocs""}]",unlabelled,5,0.29813800991689526
+"latency_ms|[""pod-a"", ""latency_ms"", {""namespace"": ""demo-ocs""}]",unlabelled,5,19.677849552396534
+"latency_ms|[""pod-b"", ""latency_ms"", {""namespace"": ""demo-ocs""}]",unlabelled,5,19.818920328596597
+"latency_ms|[""pod-c"", ""latency_ms"", {""namespace"": ""demo-ocs""}]",unlabelled,5,20.197798759414
+"request_total_rate|[""pod-a"", ""request_total"", {""namespace"": ""demo-ocs""}]",unlabelled,5,1.1222222222222225
+"request_total_rate|[""pod-b"", ""request_total"", {""namespace"": ""demo-ocs""}]",unlabelled,5,1.0766666666666667
+"request_total_rate|[""pod-c"", ""request_total"", {""namespace"": ""demo-ocs""}]",unlabelled,5,1.082608695652174

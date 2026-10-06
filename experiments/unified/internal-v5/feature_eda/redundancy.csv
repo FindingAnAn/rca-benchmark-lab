@@ -1,0 +1,7 @@
+﻿a,b,correlation,n
+cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/cdr_count,cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/failure_count,1.0,15
+cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/cdr_count,cdr/demo/demo-ocs/CDR_Recurring_success/unknown/cdr_count,1.0,15
+cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/cdr_count,cdr/demo/demo-ocs/CDR_Recurring_success/unknown/success_count,1.0,15
+cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/failure_count,cdr/demo/demo-ocs/CDR_Recurring_success/unknown/cdr_count,1.0,15
+cdr/demo/demo-ocs/CDR_Recurring_fail/unknown/failure_count,cdr/demo/demo-ocs/CDR_Recurring_success/unknown/success_count,1.0,15
+cdr/demo/demo-ocs/CDR_Recurring_success/unknown/cdr_count,cdr/demo/demo-ocs/CDR_Recurring_success/unknown/success_count,1.0,15

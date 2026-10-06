@@ -1,0 +1,8 @@
+{
+  "branch": "internal",
+  "profile": "efficient",
+  "status": "COMPLETED",
+  "seconds": 10.30596759985201,
+  "provenance": "synthetic_internal_demo",
+  "feature_eda": "post-freeze diagnostics; test must not guide tuning"
+}

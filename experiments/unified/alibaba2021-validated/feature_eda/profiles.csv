@@ -1,0 +1,2 @@
+﻿feature,split,n,missing,mean,std,p01,p50,p99,constant,mean_shift_train_sd
+anomaly_score,train,24,0,1.124151265794326,1.1821913394363652,0.0,0.7119624683364061,3.0382061543534653,False,0.0

@@ -1,0 +1,94 @@
+{
+  "run_id": "run",
+  "status": "COMPLETED",
+  "created_at": "2026-10-06T00:25:01.605338+00:00",
+  "dataset_hash": "989046c152b58de76cbc2a91fa569b424489391c1b7efba73aae579b06c93340",
+  "raw_hash": "c601c724e3bd6c6c281e87d8ab00652310db79dda4fc5926d80b8f98fa0b1eda",
+  "synthetic": false,
+  "code_hash": "0ac947b5f8bb7d4ed44c4e273d5327210b169a520831e9347fb5f5f0c21f3938",
+  "code_files": {
+    "adapters.py": "d223c959ab969d1d3cd210f07d3e80b41b32db80dc35fe959dd696ed622a8c17",
+    "cli.py": "2d9f8d80c7e3abfc2819bc8cfd4a358d081078cf351e8241331a3f4c2c61e766",
+    "connectors.py": "0bacccafa1e3a6edbc2e11439254aa4a8383c2cf0bb00c35b9691b866549e1d4",
+    "data.py": "b4f7954ca02aa66e97347479af5567c4fad32e00860ec9245fcadd62b3595a35",
+    "evaluation.py": "418c6da8c5a5d1d36026bd0d45f99df6cbb92e39219b445e6644695cf1436ec9",
+    "io.py": "b88268bc56a7f060d0f8e13f677165afbc75a5ca57eff68d27d684fce74fd415",
+    "models.py": "55717c74950d66396a0dd31ad7e5ef6f4de940a447ea68ea6a3fcae92d912e2f",
+    "monitoring.py": "7d2fc28937b1479347f7b27fccefd4da46dbb1612de67fc0ab8301d64371c80d",
+    "registry.py": "4583479c0b28161dfbca93c7dd0ef9f45737243d7aa0d12c54930febc32cca5d",
+    "runner.py": "d6e07846bb783ee7e9ddf105794c602b0cea4e9cca9f4f796df38fee95da52bc",
+    "synthetic.py": "17a96a04084cefefdaeda9014cb784eeee71c0e03e9f5ff5c5e5318a4dc6ad7c",
+    "__init__.py": "82f43d663dc196011a13e4561ef56e356790d5ee7bcb69cff969372a96157c5f",
+    "__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279"
+  },
+  "config_hash": "c0e4846920a990e7e3aabdb403cbbfc01253f0e467ef3b941c00880e4831a7df",
+  "config": {
+    "dataset_version": "rcaeval-re1ob-cpu-app-resource-public-v3",
+    "feature_version": "incident-candidate-v1",
+    "seed": 42,
+    "n_cases": 30,
+    "step_seconds": 30,
+    "pre_seconds": 600,
+    "post_seconds": 180,
+    "train_fraction": 0.6,
+    "validation_fraction": 0.2,
+    "embargo_seconds": 60,
+    "min_metric_coverage": 0.7,
+    "label_tiers": [
+      "public_injection"
+    ],
+    "modalities": [
+      "metric"
+    ],
+    "seeds": [
+      42
+    ],
+    "bootstrap_samples": 100,
+    "algorithms": {
+      "ml_logistic": [
+        {
+          "lr": 0.02,
+          "epochs": 80,
+          "l2": 0.001
+        },
+        {
+          "lr": 0.02,
+          "epochs": 80,
+          "l2": 0.03
+        }
+      ]
+    },
+    "gates": {
+      "min_hit3": 0.7,
+      "min_mrr": 0.5,
+      "max_p95_ms": 1000.0,
+      "min_evidence_coverage": 0.95
+    },
+    "split_protocol": "campaign_holdout"
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "selection": "highest mean validation MRR across configured seeds; tie: first config",
+  "test_usage": "all algorithms evaluated once per selected config/seed; no refit on validation",
+  "finished_at": "2026-10-06T00:25:02.328749+00:00",
+  "resource": {
+    "wall_seconds": 0.4965640001464635,
+    "cpu_seconds": 0.328125,
+    "python_traced_peak_bytes": 2418605,
+    "rss_peak_bytes": null,
+    "gpu_peak_bytes": null,
+    "note": "tracemalloc is Python allocator tracing; not total process/native/GPU memory"
+  },
+  "artifact_hashes": {
+    "leaderboard.csv": "36f492b58f79bc5f0c1d6bf7c8a9af0b4ac88c5f20ec8783b020beb5e61b0a7a",
+    "summary.json": "2b8961304d5f8c6e2a664ee5469eab1246a8c5909b80ad8fa334f85474477abf",
+    "trials.csv": "b9cfd9d182a0a49d3cc0d61328a265f31cee0c0883b6f4ea37375b1bab27bd20",
+    "models/ml_logistic-c0-s42.json": "228f2be430a215505475220e33374ed738faad6667f99aaad94d782a5c5ac97f",
+    "models/ml_logistic-c1-s42.json": "5f4c4bdf6fb01561d4801c7238e9fb5668a22ddf4c9b84b4f4ecdff320414dba",
+    "model_cards/ml_logistic.json": "796c5540a14f1a1a631ecabaeeed5adac82929d43d7f94c5b95cc558131f0f55",
+    "predictions/ml_logistic-s42.jsonl": "aa84bca58f2620e5b1a0cd5fb7a0923e9cf4dffb93d812f6782fbbb3e42afa2c"
+  }
+}

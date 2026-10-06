@@ -1,0 +1,42 @@
+{
+  "algorithms": {
+    "dl_autoencoder": {
+      "FP": 77,
+      "TN": 19,
+      "TP": 88,
+      "FN": 8
+    },
+    "dl_mlp": {
+      "FP": 93,
+      "TN": 3,
+      "TP": 95,
+      "FN": 1
+    },
+    "ml_logistic": {
+      "FP": 96,
+      "TP": 94,
+      "FN": 2
+    },
+    "ml_pca": {
+      "FP": 94,
+      "TN": 2,
+      "TP": 96
+    },
+    "stat_mad": {
+      "TN": 72,
+      "FP": 24,
+      "TP": 64,
+      "FN": 32
+    },
+    "stat_mean_robust_z": {
+      "TN": 74,
+      "FP": 22,
+      "TP": 54,
+      "FN": 42
+    }
+  },
+  "review_rows": 491,
+  "unit": "case-model-seed predictions; rows across seeds are not independent incidents",
+  "limits": "Mistakes are relative to supplied labels. A suspected label error requires BA/SME adjudication. No automatic correction.",
+  "test_usage": "post-evaluation error diagnosis; freeze test and use new holdout for subsequent model selection"
+}

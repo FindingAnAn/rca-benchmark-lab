@@ -1,0 +1,46 @@
+{
+  "algorithm": "ml_pca",
+  "task": "candidate entity ranking",
+  "dataset_hash": "4ae6032e84fa36881000696b41638b8e046985c5e91d008e8a28930ba569b1f9",
+  "feature_names": [
+    "metric_max_abs_z",
+    "metric_mean_abs_z",
+    "metric_ewma_z",
+    "metric_missing"
+  ],
+  "selected": {
+    "index": 0,
+    "params": {
+      "components": 2
+    },
+    "seeds": [
+      {
+        "seed": 42,
+        "path": "models\\ml_pca-c0-s42.json",
+        "validation_mrr": 1.0,
+        "threshold": 0.15918665815383032,
+        "fit_seconds": 0.0004365001805126667
+      }
+    ],
+    "validation_mrr": 1.0
+  },
+  "intended_use": "offline/shadow support",
+  "limitations": [
+    "ranking is not causal proof",
+    "statistical/unsupervised models rank abnormal entities, which can be downstream symptoms",
+    "evidence is supporting telemetry, not a neural attribution or calibrated causal probability"
+  ],
+  "lifecycle": {
+    "checks": {
+      "hit3": true,
+      "mrr": true,
+      "candidate_coverage": true,
+      "latency": true,
+      "evidence": true,
+      "failures": true
+    },
+    "decision": "DEMO_ONLY",
+    "production_allowed": false,
+    "reason": "Offline gates do not authorize production promotion"
+  }
+}

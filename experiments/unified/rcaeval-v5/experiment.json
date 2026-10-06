@@ -1,0 +1,8 @@
+{
+  "branch": "rcaeval",
+  "profile": "full",
+  "status": "COMPLETED",
+  "seconds": 15.08134869998321,
+  "provenance": "public_subset",
+  "feature_eda": "post-freeze diagnostics; test must not guide tuning"
+}

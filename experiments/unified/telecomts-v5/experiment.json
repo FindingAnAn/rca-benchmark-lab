@@ -1,0 +1,8 @@
+{
+  "branch": "telecomts",
+  "profile": "full",
+  "status": "COMPLETED",
+  "seconds": 9.34113850002177,
+  "provenance": "public_subset",
+  "feature_eda": "post-freeze diagnostics; test must not guide tuning"
+}

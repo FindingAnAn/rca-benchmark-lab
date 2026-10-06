@@ -18,4 +18,4 @@ rca-bench = "rca_bench.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["rca_bench*", "datasets*", "features*", "baselines*", "models*", "evaluation*", "pipelines*", "integrations*"]
+include = ["rca_bench*", "datasets*", "features*", "baselines*", "models*", "evaluation*", "pipelines*", "integrations*", "analysis*"]

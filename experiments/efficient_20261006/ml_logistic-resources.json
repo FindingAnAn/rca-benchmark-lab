@@ -1,0 +1,12 @@
+{
+  "wall_seconds": 7.078847900032997,
+  "cpu_seconds": 6.234375,
+  "process_peak_rss_bytes": 230797312,
+  "scope": "wall/cpu: pipeline after imports, including raw/features/train/tune/score/reports; RSS: process lifetime including interpreter/imports",
+  "all_trial_model_bytes": 5816,
+  "threads_requested": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "dataset_version": "rcaeval-re1ob-cpu-app-resource-public-v3",
+  "feature_version": "incident-candidate-v1",
+  "seed": 42,
+  "n_cases": 30,
+  "step_seconds": 30,
+  "pre_seconds": 600,
+  "post_seconds": 180,
+  "train_fraction": 0.6,
+  "validation_fraction": 0.2,
+  "embargo_seconds": 60,
+  "min_metric_coverage": 0.7,
+  "label_tiers": [
+    "public_injection"
+  ],
+  "modalities": [
+    "metric"
+  ],
+  "seeds": [
+    42
+  ],
+  "bootstrap_samples": 100,
+  "algorithms": {
+    "stat_ewma": [
+      {
+        "context_weight": 0.0
+      },
+      {
+        "context_weight": 0.3
+      }
+    ]
+  },
+  "gates": {
+    "min_hit3": 0.7,
+    "min_mrr": 0.5,
+    "max_p95_ms": 1000.0,
+    "min_evidence_coverage": 0.95
+  },
+  "split_protocol": "campaign_holdout"
+}

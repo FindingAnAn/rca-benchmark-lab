@@ -1,0 +1,3 @@
+﻿algorithm,seed,case,group,outcome,score,ranking_error,root_coverage,inference_error,review_status,ba_root_cause,ba_label_correct,ba_reason,action
+stat_mad,42,re1ob_checkoutservice_cpu_2-control,checkoutservice-cpu,FP,100.0,False,,,pending,,,,review_only_no_auto_relabel
+stat_mad,123,re1ob_checkoutservice_cpu_2-control,checkoutservice-cpu,FP,100.0,False,,,pending,,,,review_only_no_auto_relabel

@@ -1,0 +1,6 @@
+{
+  "kind": "public",
+  "config": "configs/telecomts_public.json",
+  "provenance": "public_subset",
+  "raw_eda": "eda_configs/telecomts_public.json"
+}

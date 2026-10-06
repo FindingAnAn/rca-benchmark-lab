@@ -1,0 +1,67 @@
+{
+  "dataset": "rcaeval",
+  "sources": [
+    {
+      "file": "re1ob_adservice_cpu_1.csv",
+      "sha256": "3babb7a9943ca44d7b379fd767431bb28a599a3e826d5ebaa922ccf48cc019c3"
+    },
+    {
+      "file": "re1ob_adservice_cpu_2.csv",
+      "sha256": "c5460fb15a6e30b92deb109166dcfd64a439e160596a8aab75adaaac793393ca"
+    },
+    {
+      "file": "re1ob_adservice_cpu_3.csv",
+      "sha256": "043b094c2cb90ac8bb9d70f4880b7c09f2996c021c7f1c3ec7897f844f282c2d"
+    },
+    {
+      "file": "re1ob_adservice_cpu_4.csv",
+      "sha256": "7bc198b2c4d8915c4f7d1cffcd5c982076c658ef922d7d687a4ed481e4c84df2"
+    },
+    {
+      "file": "re1ob_adservice_cpu_5.csv",
+      "sha256": "6a775d27631a031a981b171af31a5c8e7f845f74f16992f7500c022913bdd67b"
+    },
+    {
+      "file": "re1ob_cartservice_cpu_1.csv",
+      "sha256": "b4a17a2fa089c1bd49c01f17561e9284c6edb9fed10569c824988b7b3305d8a6"
+    },
+    {
+      "file": "re1ob_cartservice_cpu_2.csv",
+      "sha256": "a6c8e8578918f5a7838315262dfe39eb5b4884edc4ce9358c8a8b2d586aad3ab"
+    },
+    {
+      "file": "re1ob_cartservice_cpu_3.csv",
+      "sha256": "eb565341f3ab991a410dcfce6221eacbd2ce0370be85a86a45f73f916601e4f8"
+    },
+    {
+      "file": "re1ob_cartservice_cpu_4.csv",
+      "sha256": "f69fd6d2bbdb7fd40e35c6cb4f7380dd82205a83a166a0947ce2cb095246996a"
+    },
+    {
+      "file": "re1ob_cartservice_cpu_5.csv",
+      "sha256": "681d5ccdaa0499ba6fbc2f8644f9bdafb61ef78e4dd549cf3224f659760182fb"
+    },
+    {
+      "file": "re1ob_checkoutservice_cpu_1.csv",
+      "sha256": "04f5a83420bbd16bb05252dd41fcaac9ef64275e874206eb1e5107662967a60f"
+    },
+    {
+      "file": "re1ob_checkoutservice_cpu_2.csv",
+      "sha256": "8051a0ac676da7bd37326084bb58913fccbe58c49cc85615ba856911619922d3"
+    },
+    {
+      "file": "re1ob_checkoutservice_cpu_3.csv",
+      "sha256": "8ff134ad88a4c2e6737f8edb3eff2e31a5df59138825690c7ba4a3358dbfabc4"
+    },
+    {
+      "file": "re1ob_checkoutservice_cpu_4.csv",
+      "sha256": "1cada21fa95ccddbe8a625646a782d749f96e04d3e28abe1bd55a5bbf20a8b52"
+    },
+    {
+      "file": "re1ob_checkoutservice_cpu_5.csv",
+      "sha256": "3426b1486c7bfd2083d26218472f6320568de8398f9fafea023c874b65e9b062"
+    }
+  ],
+  "provenance": "public_subset",
+  "availability": "retrospective unless source arrival column supplied"
+}

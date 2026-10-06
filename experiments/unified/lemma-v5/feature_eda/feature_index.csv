@@ -1,0 +1,5 @@
+﻿index,feature
+0,metric_ewma_z
+1,metric_max_abs_z
+2,metric_mean_abs_z
+3,metric_missing

@@ -1,0 +1,9 @@
+﻿algorithm,config_index,seed,params,validation_mrr,threshold,fit_seconds,status
+stat_mad,0,42,{'context_weight': 0.0},1.0,12.662000207078872,9.300000965595245e-05,SUCCESS
+stat_mad,1,42,{'context_weight': 0.3},1.0,12.662000207078872,6.010010838508606e-05,SUCCESS
+stat_ewma,0,42,{'context_weight': 0.0},1.0,9.28422350930811,0.00010040006600320339,SUCCESS
+stat_ewma,1,42,{'context_weight': 0.3},1.0,9.28422350930811,0.00012319977395236492,SUCCESS
+ml_logistic,0,42,"{'lr': 0.02, 'epochs': 80, 'l2': 0.001}",1.0,0.9819817365915499,0.06530570005998015,SUCCESS
+ml_logistic,1,42,"{'lr': 0.02, 'epochs': 80, 'l2': 0.03}",1.0,0.9760752121841071,0.0737033998593688,SUCCESS
+ml_pca,0,42,{'components': 2},1.0,0.15918665815383032,0.0005161999724805355,SUCCESS
+ml_pca,1,42,{'components': 4},1.0,1.3568407569801403e-28,0.0006387000903487206,SUCCESS
