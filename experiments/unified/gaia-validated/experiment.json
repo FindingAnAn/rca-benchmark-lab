@@ -1,8 +1,0 @@
-{
-  "branch": "gaia",
-  "profile": "efficient",
-  "status": "COMPLETED",
-  "seconds": 2.8284549000672996,
-  "provenance": "schema_fixture_only",
-  "feature_eda": "post-freeze diagnostics; test must not guide tuning"
-}

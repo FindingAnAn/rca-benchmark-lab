@@ -1,8 +1,4 @@
-{
-  "version": "0.2.0",
-  "configurations": [
-    {"name": "RCAEval: resource metrics", "type": "debugpy", "request": "launch", "module": "pipelines.quickstart", "args": ["--dataset", "rcaeval"], "cwd": "${workspaceFolder}", "console": "integratedTerminal", "justMyCode": true},
-    {"name": "RCAEval: APP + resource metrics", "type": "debugpy", "request": "launch", "module": "pipelines.quickstart", "args": ["--dataset", "rcaeval_app"], "cwd": "${workspaceFolder}", "console": "integratedTerminal", "justMyCode": true},
-    {"name": "TelecomTS: anomaly windows", "type": "debugpy", "request": "launch", "module": "pipelines.quickstart", "args": ["--dataset", "telecomts"], "cwd": "${workspaceFolder}", "console": "integratedTerminal", "justMyCode": true}
-  ]
-}
+{"version":"0.2.0","configurations":[
+ {"name":"RCAEval full (corpus already local)","type":"debugpy","request":"launch","module":"rca_lab.cli","args":["rcaeval","--config","config/rcaeval.json","--data","data/rcaeval","--output","data/runs/rcaeval_debug"],"cwd":"${workspaceFolder}","console":"integratedTerminal"},
+ {"name":"Internal (edit time range first)","type":"debugpy","request":"launch","module":"rca_lab.cli","args":["internal","--config","config/internal.json","--start","1791507600","--reference-end","1791509400","--end","1791511200","--output","data/runs/internal_debug"],"cwd":"${workspaceFolder}","console":"integratedTerminal"}
+]}

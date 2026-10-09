@@ -1,1 +1,0 @@
-from rca_bench.adapters import evaluate_external

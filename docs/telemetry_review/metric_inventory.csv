@@ -1,0 +1,61 @@
+﻿metric,layer,type_status,transform,relations,source
+aerospike_latencies_read_ms_bucket,DB,histogram_candidate,rate từng bucket; p95/p99 giữ le; xác nhận histogram cumulative và đơn vị,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_latencies_write_ms_bucket,DB,histogram_candidate,rate từng bucket; p95/p99 giữ le; xác nhận histogram cumulative và đơn vị,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_namespace_client_delete_error,DB,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_namespace_client_delete_success,DB,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_namespace_client_read_error,DB,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_namespace_client_read_success,DB,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_namespace_client_write_error,DB,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_namespace_client_write_success,DB,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_namespace_clock_skew_stop_writes,DB,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_namespace_dead_partitions,DB,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_namespace_device_available_pct,DB,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_namespace_hwm_breached,DB,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_namespace_memory_free_pct,DB,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_namespace_stop_writes,DB,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_node_stats_client_connections,DB,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_node_stats_client_connections_opened,DB,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_node_stats_cluster_size,DB,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_node_stats_heap_efficiency_pct,DB,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_node_stats_rw_in_progress,DB,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_xdr_lag,DB,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_xdr_latency_ms,DB,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_xdr_lap_us,DB,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_xdr_recoveries,DB,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_xdr_recoveries_pending,DB,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_xdr_retry_conn_reset,DB,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_xdr_retry_dest,DB,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_xdr_retry_no_node,DB,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+aerospike_xdr_success,DB,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,R07-R10,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+all_msg_counter_eventtype,APP,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,"R01-R06, R15-R20",Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+all_msg_counter_timeout,APP,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,"R01-R06, R15-R20",Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+app_exception_counter,APP,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,"R01-R06, R15-R20",Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+counter_mml,APP,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,"R01-R06, R15-R20",Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+desc_code_counter,APP,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,"R01-R06, R15-R20",Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+external_counter,APP,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,"R01-R06, R15-R20",Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+process_time,APP,unknown_latency_semantics,xác nhận gauge/sum/average và đơn vị; không suy ra p95 giao dịch từ trung bình,"R01-R06, R15-R20",Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+process_time_ms,APP,unknown_latency_semantics,xác nhận gauge/sum/average và đơn vị; không suy ra p95 giao dịch từ trung bình,"R01-R06, R15-R20",Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+request_counter,APP,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,"R01-R06, R15-R20",Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+request_drop_counter,APP,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,"R01-R06, R15-R20",Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+request_timeout_counter,APP,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,"R01-R06, R15-R20",Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+response_counter,APP,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,"R01-R06, R15-R20",Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+result_code_counter,APP,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,"R01-R06, R15-R20",Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+container_cpu_usage_seconds_total,CONTAINER,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,R11-R12,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+container_fs_reads_bytes_total,CONTAINER,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,R11-R12,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+container_fs_writes_bytes_total,CONTAINER,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,R11-R12,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+container_memory_rss,CONTAINER,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R11-R12,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+container_memory_working_set_bytes,CONTAINER,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R11-R12,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+container_spec_cpu_quota,CONTAINER,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R11-R12,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+container_spec_memory_limit_bytes,CONTAINER,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R11-R12,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+kube_pod_info,CONTAINER,metadata,join metadata/topology theo thời điểm; không correlation giá trị 1,R11-R12,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+node_disk_read_bytes_total,SERVER,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,R13-R14,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+node_disk_read_time_seconds_total,SERVER,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,R13-R14,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+node_disk_reads_completed_total,SERVER,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,R13-R14,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+node_disk_write_time_seconds_total,SERVER,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,R13-R14,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+node_disk_writes_completed_total,SERVER,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,R13-R14,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+node_disk_written_bytes_total,SERVER,counter_candidate,delta/time hoặc increase; xử lý reset; xác nhận TYPE exporter,R13-R14,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+node_filesystem_free_bytes,SERVER,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R13-R14,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+node_filesystem_size_bytes,SERVER,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R13-R14,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+node_memory_MemAvailable_bytes,SERVER,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R13-R14,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+node_memory_MemTotal_bytes,SERVER,gauge_candidate,giữ giá trị; xác nhận unit/TYPE; tỷ lệ chỉ chia mẫu số hợp lệ,R13-R14,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh
+node_uname_info,SERVER,metadata,join metadata/topology theo thời điểm; không correlation giá trị 1,R13-R14,Hai ảnh discovery.json do người dùng cung cấp; tên được chép từ ảnh

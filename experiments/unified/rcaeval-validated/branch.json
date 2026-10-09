@@ -1,6 +1,0 @@
-{
-  "kind": "public",
-  "config": "configs/rcaeval_app_public.json",
-  "provenance": "public_subset",
-  "raw_eda": "eda_configs/rcaeval_app_public.json"
-}

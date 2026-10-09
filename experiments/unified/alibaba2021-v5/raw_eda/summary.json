@@ -1,9 +1,0 @@
-{
-  "modalities": {
-    "metric": 60,
-    "log": 0,
-    "trace": 0,
-    "call": 2
-  },
-  "scope": "raw adapter observations; no label assumptions"
-}

@@ -1,8 +1,0 @@
-{
-  "branch": "alibaba2021",
-  "profile": "efficient",
-  "status": "COMPLETED",
-  "seconds": 0.9224717000033706,
-  "provenance": "schema_fixture_only",
-  "feature_eda": "post-freeze diagnostics; test must not guide tuning"
-}

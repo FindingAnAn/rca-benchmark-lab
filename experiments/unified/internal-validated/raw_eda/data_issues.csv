@@ -1,9 +1,0 @@
-﻿file,row,entity,metric,issue,detail
-telemetry.csv,212,pod-a,latency_ms,nonfinite,missing/invalid value; retained in missing count
-telemetry.csv,932,pod-b,latency_ms,nonfinite,missing/invalid value; retained in missing count
-telemetry.csv,1652,pod-c,latency_ms,nonfinite,missing/invalid value; retained in missing count
-telemetry.csv,2143,pod-a,cpu_cores,exact_duplicate,duplicate excluded from numeric profile
-telemetry.csv,2144,pod-a,latency_ms,conflicting_duplicate,all versions excluded from numeric profile; source retained
-telemetry.csv,453,pod-a,request_total,counter_reset_or_discontinuity,not proof of fault; derive rates before model features
-telemetry.csv,1173,pod-b,request_total,counter_reset_or_discontinuity,not proof of fault; derive rates before model features
-telemetry.csv,1875,pod-c,request_total,counter_reset_or_discontinuity,not proof of fault; derive rates before model features

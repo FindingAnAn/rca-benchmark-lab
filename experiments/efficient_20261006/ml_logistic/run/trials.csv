@@ -1,3 +1,0 @@
-﻿algorithm,config_index,seed,params,validation_mrr,threshold,fit_seconds,status
-ml_logistic,0,42,"{'lr': 0.02, 'epochs': 80, 'l2': 0.001}",1.0,0.9922246611461237,0.2947301999665797,SUCCESS
-ml_logistic,1,42,"{'lr': 0.02, 'epochs': 80, 'l2': 0.03}",1.0,0.9884204471646354,0.07550680008716881,SUCCESS

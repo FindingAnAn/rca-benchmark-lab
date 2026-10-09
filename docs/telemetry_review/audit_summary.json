@@ -1,0 +1,19 @@
+{
+  "metric_count": 60,
+  "metric_layers": {
+    "DB": 28,
+    "APP": 13,
+    "CONTAINER": 8,
+    "SERVER": 11
+  },
+  "workbook_sheets": 117,
+  "schema_sheets": 109,
+  "field_positions": 6215,
+  "distinct_literal_field_names": 1144,
+  "duplicate_name_groups": 254,
+  "source_sha256": {
+    "Template_CDR_thống kê_1.xlsx": "0a09bfcf70bfea67ba6deff04b860945d19fcba00a4617de5671b1fefba2156a",
+    "Usecase d_i soát th_t thoát cu_c gia h_n (1)_1.docx": "eae4d9af6765c1f240f476fce40ef812612c026de349620fd08d77bb89c41592"
+  },
+  "actual_correlation_computed": false
+}

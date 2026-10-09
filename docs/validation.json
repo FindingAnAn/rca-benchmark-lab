@@ -1,9 +1,43 @@
 {
-  "status": "PASS",
-  "snapshots": 22,
-  "lifecycle_runs": 8,
-  "public_files": 22,
-  "live_integrations_verified": false,
-  "official_rcaeval_methods_executed": false,
-  "production_ready": false
+  "date": "2026-10-09",
+  "architecture": "modular_monolith",
+  "flows": [
+    "rcaeval",
+    "internal"
+  ],
+  "offline_tests": {
+    "passed": 16,
+    "failed": 0
+  },
+  "rcaeval": {
+    "metadata_cases": 735,
+    "executed_cases": 2,
+    "mode": "smoke",
+    "full_corpus_executed": false,
+    "ranking_modalities": [
+      "metric"
+    ]
+  },
+  "internal": {
+    "synthetic_end_to_end_test": true,
+    "real_data_executed": false,
+    "vm_live_connection_tested": false
+  },
+  "formatting": "Black + isort",
+  "backup": "../rca_before_two_flow_cleanup.zip",
+  "backup_crc_verified": true,
+  "relationships": {
+    "standalone_cli_synthetic_run": true,
+    "production_data_validated": false,
+    "checks": [
+      "reference_only_threshold",
+      "persistent_exceedance",
+      "missing_breaks_streak",
+      "zero_denominator_unknown",
+      "lag_direction",
+      "constant_correlation_unknown",
+      "ambiguous_series",
+      "high_correlation_with_imbalance"
+    ]
+  }
 }

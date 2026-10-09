@@ -1,0 +1,184 @@
+{
+  "analysis": {
+    "window_seconds": 60,
+    "min_reference_points": 20,
+    "min_coverage_ratio": 0.8,
+    "random_seed": 42,
+    "methods": [
+      "mad",
+      "nsigma",
+      "iqr",
+      "pca",
+      "isolation_forest"
+    ],
+    "max_rows": 500000,
+    "pca_components": 5,
+    "forest_trees": 32,
+    "forest_samples": 256
+  },
+  "metric": {
+    "enabled": false,
+    "step_seconds": 10,
+    "chunk_seconds": 900,
+    "max_export_seconds": 3600,
+    "max_rows": 500000,
+    "entity_label": "pod_id",
+    "systems": [
+      {
+        "system_id": "system_1",
+        "match_labels": {
+          "vnf_instance_name": "REPLACE_SYSTEM_1"
+        }
+      },
+      {
+        "system_id": "system_2",
+        "match_labels": {
+          "vnf_instance_name": "REPLACE_SYSTEM_2"
+        }
+      },
+      {
+        "system_id": "system_3",
+        "match_labels": {
+          "vnf_instance_name": "REPLACE_SYSTEM_3"
+        }
+      },
+      {
+        "system_id": "system_4",
+        "match_labels": {
+          "vnf_instance_name": "REPLACE_SYSTEM_4"
+        }
+      },
+      {
+        "system_id": "system_5",
+        "match_labels": {
+          "vnf_instance_name": "REPLACE_SYSTEM_5"
+        }
+      }
+    ],
+    "metrics": [
+      {
+        "name": "request_counter",
+        "kind": "counter",
+        "unit": "request",
+        "comparison_dimensions": [
+          "command_name",
+          "pod_type"
+        ]
+      },
+      {
+        "name": "response_counter",
+        "kind": "counter",
+        "unit": "response",
+        "comparison_dimensions": [
+          "command_name",
+          "pod_type"
+        ]
+      },
+      {
+        "name": "process_time_ms",
+        "kind": "gauge",
+        "unit": "ms",
+        "comparison_dimensions": [
+          "command_name",
+          "pod_type"
+        ]
+      }
+    ]
+  },
+  "request_response_rules": [],
+  "log": {
+    "enabled": false,
+    "error_pattern": "error|exception|timeout|failed",
+    "sources": [
+      {
+        "file": "system_1.csv",
+        "system_id": "system_1",
+        "timestamp_column": "timestamp",
+        "text_column": "text",
+        "time_unit": "iso",
+        "timezone": "Asia/Ho_Chi_Minh"
+      },
+      {
+        "file": "system_2.csv",
+        "system_id": "system_2",
+        "timestamp_column": "timestamp",
+        "text_column": "text",
+        "time_unit": "iso",
+        "timezone": "Asia/Ho_Chi_Minh"
+      },
+      {
+        "file": "system_3.csv",
+        "system_id": "system_3",
+        "timestamp_column": "timestamp",
+        "text_column": "text",
+        "time_unit": "iso",
+        "timezone": "Asia/Ho_Chi_Minh"
+      },
+      {
+        "file": "system_4.csv",
+        "system_id": "system_4",
+        "timestamp_column": "timestamp",
+        "text_column": "text",
+        "time_unit": "iso",
+        "timezone": "Asia/Ho_Chi_Minh"
+      },
+      {
+        "file": "system_5.csv",
+        "system_id": "system_5",
+        "timestamp_column": "timestamp",
+        "text_column": "text",
+        "time_unit": "iso",
+        "timezone": "Asia/Ho_Chi_Minh"
+      }
+    ]
+  },
+  "trace": {
+    "enabled": false
+  },
+  "alarm": {
+    "enabled": false
+  },
+  "relationships": {
+    "enabled": true,
+    "fields": [
+      "request_counter_rate",
+      "response_counter_rate",
+      "process_time_ms",
+      "log_error_ratio",
+      "log_count"
+    ],
+    "min_pairs": 20,
+    "min_reference_points": 20,
+    "max_lag_windows": 3,
+    "max_visual_cohorts": 10,
+    "rules": [
+      {
+        "name": "request_response_gap",
+        "left": "request_counter_rate",
+        "right": "response_counter_rate",
+        "operation": "relative_gap",
+        "threshold_mode": "reference_quantile",
+        "quantile": 0.99,
+        "direction": "upper",
+        "min_left": 0.01,
+        "consecutive_windows": 3
+      },
+      {
+        "name": "process_time_high",
+        "left": "process_time_ms",
+        "operation": "value",
+        "threshold_mode": "reference_quantile",
+        "quantile": 0.99,
+        "consecutive_windows": 3
+      },
+      {
+        "name": "log_error_ratio_high",
+        "left": "log_error_ratio",
+        "operation": "value",
+        "threshold_mode": "reference_quantile",
+        "quantile": 0.99,
+        "consecutive_windows": 3
+      }
+    ]
+  }
+}

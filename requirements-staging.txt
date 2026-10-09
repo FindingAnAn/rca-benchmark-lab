@@ -1,3 +1,0 @@
-# Only needed to convert upstream RCAEval Parquet on the approved staging machine.
--r requirements.txt
-pyarrow==19.0.1

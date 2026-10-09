@@ -1,9 +1,0 @@
-{
-  "rows": 24,
-  "features": 31,
-  "source_sha256": "98c18757704a859cad07c1aef4a119cda965d0b7805dccbbc1e1ea6df76251ec",
-  "reference": "train only",
-  "test_use": "post-freeze diagnostic; do not tune on this report",
-  "label_policy": "unknown is not normal; candidate non-root is not a healthy incident",
-  "limits": "Correlation is not causation. Samples within incident/capture are dependent. No automatic feature deletion."
-}

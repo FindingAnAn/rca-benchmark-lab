@@ -1,0 +1,18 @@
+{
+  "analysis": {
+    "window_seconds": 60,
+    "min_reference_points": 10,
+    "min_coverage_ratio": 0.8,
+    "random_seed": 42,
+    "methods": [
+      "mad",
+      "nsigma",
+      "iqr",
+      "pca",
+      "isolation_forest"
+    ],
+    "pca_components": 5,
+    "forest_trees": 32,
+    "forest_samples": 256
+  }
+}

@@ -1,7 +1,10 @@
 .venv/
-.deps/
+.venv312/
 __pycache__/
 *.pyc
-data/local/
+.pytest_cache/
+*.egg-info/
+data/
+.env
 wheelhouse/
 *.log

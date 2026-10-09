@@ -1,9 +1,0 @@
-{
-  "status": "PASS",
-  "snapshots": 32,
-  "lifecycle_runs": 13,
-  "public_files": 22,
-  "live_integrations_verified": false,
-  "official_rcaeval_methods_executed": false,
-  "production_ready": false
-}

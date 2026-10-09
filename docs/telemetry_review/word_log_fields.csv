@@ -1,0 +1,54 @@
+﻿field_id,original_name,source,status
+1000,msisdn,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+1001,offerExternalId,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+1002,wsImsi,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+1003,iccid,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+1005,initAmount,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+1017,regType,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+1039,value,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+1046,birthday,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+1073,deposit,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+1095,reason,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+1096,subType,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+11,sessionId,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+1147,updateDate,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+1149,errorCode,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+1150,description,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+17,requestType,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+2000,ipAddress,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+2001,channel,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+22,serviceType,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+4034,BccsCustId,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+4035,BccsSubId,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+4036,BccsAcctId,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+4037,CompletedDate,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+4038,billingCycleTypeIndex,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+4039,usageLimit,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+4040,SubCategory,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+4041,AcctContract,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+4042,Sex,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+4043,Vip,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+4044,CustType,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+4045,RentalCharge,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+5104,msisdnForRoute,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+8003,confirmationDate_2,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+8007,requestDate,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+8200,PARENT_REQUEST_ID,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+8300,id,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+8305,processFlowDate,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+8310,blockOrUnblockType,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+8311,op,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+8312,path,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+9992,processFlowSpecification,Word §1.3: Cramsg mapField,explicit_key; semantics require component mapping
+,sessionId,Word §1.3: message/log samples,observed token; not a universal CDR column
+,code,Word §1.3: message/log samples,observed token; not a universal CDR column
+,isGenCdrTrigger,Word §1.3: message/log samples,observed token; not a universal CDR column
+,isGenCbaTrigger,Word §1.3: message/log samples,observed token; not a universal CDR column
+,Rating,Word §1.3: message/log samples,observed token; not a universal CDR column
+,AbmRet,Word §1.3: message/log samples,observed token; not a universal CDR column
+,RetryQuery,Word §1.3: message/log samples,observed token; not a universal CDR column
+,RetryTimeout,Word §1.3: message/log samples,observed token; not a universal CDR column
+,RECUR_SUCCESS,Word §1.3: message/log samples,observed token; not a universal CDR column
+,REJECT,Word §1.3: message/log samples,observed token; not a universal CDR column
+,CDR,Word §1.3: message/log samples,observed token; not a universal CDR column
+,RecurringMsg,Word §1.3: message/log samples,observed token; not a universal CDR column

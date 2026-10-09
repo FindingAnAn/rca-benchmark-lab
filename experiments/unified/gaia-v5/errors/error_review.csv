@@ -1,5 +1,0 @@
-﻿algorithm,seed,case,group,outcome,score,ranking_error,root_coverage,inference_error,review_status,ba_root_cause,ba_label_correct,ba_reason,action
-stat_mad,42,case-29,capture-29,FN,12.53743889608071,False,1.0,,pending,,,,review_only_no_auto_relabel
-stat_ewma,42,case-29,capture-29,FN,8.935040102271264,False,1.0,,pending,,,,review_only_no_auto_relabel
-ml_logistic,42,case-29,capture-29,FN,0.978276725825418,False,1.0,,pending,,,,review_only_no_auto_relabel
-ml_pca,42,case-28,capture-28,FP,1.1778687467200901,False,,,pending,,,,review_only_no_auto_relabel
