@@ -1,0 +1,42 @@
+﻿dataset,file,rcaeval_field,internal_field,status,rule,source_sheet,source_schema_position,source_example_file
+RE2-OB,logs.csv,cluster_id,template_id,PROXY,Internal family identifier; never copy case-local RCAEval numeric cluster IDs,Other_fields,S6c924fc338c1:8,RE2-OB/checkoutservice_cpu/1/logs.csv
+RE2-OB,logs.csv,container_name,system_id,COARSE_PROXY,"Source CSV identifies system/business stream, not a Kubernetes container; explicit topology mapping required",Other_fields,S6232e91b331c:3 | S6c924fc338c1:3,RE2-OB/checkoutservice_cpu/1/logs.csv
+RE2-OB,logs.csv,error,level; log_error_ratio,PROXY,Explicit severity and legacy keyword signals; not equivalent to RCAEval error payload,Other_fields,S6232e91b331c:7 | S6c924fc338c1:7,RE2-OB/checkoutservice_cpu/1/logs.csv
+RE2-OB,logs.csv,level,level,CONDITIONAL,Extract explicit [INFO/WARN/ERROR/...]; missing remains unknown,Other_fields,S6232e91b331c:5 | S6c924fc338c1:5,RE2-OB/checkoutservice_cpu/1/logs.csv
+RE2-OB,logs.csv,log_template,template_id,PROXY,Fixed parser families; not Drain-mined RCAEval template strings,Other_fields,S6c924fc338c1:9,RE2-OB/checkoutservice_cpu/1/logs.csv
+RE2-OB,logs.csv,message,message,STRUCTURAL,Split multiline CSV cell into observed lines; retain source_file/source_record/line_number,Other_fields,S6232e91b331c:4 | S6c924fc338c1:4,RE2-OB/checkoutservice_cpu/1/logs.csv
+RE2-OB,logs.csv,req_path,,MISSING,"CDR output_path is a filesystem path, not an HTTP request path",Other_fields,S6232e91b331c:6 | S6c924fc338c1:6,RE2-OB/checkoutservice_cpu/1/logs.csv
+RE2-OB,logs.csv,time,timestamp,AXIS,Derive display time from UTC timestamp; do not use time-of-day alone for joins,Other_fields,S6232e91b331c:1 | S6c924fc338c1:1,RE2-OB/checkoutservice_cpu/1/logs.csv
+RE2-OB,logs.csv,timestamp,timestamp,CONDITIONAL,@timestamp -> UTC epoch seconds; confirm source display timezone; RCAEval timestamp unit is separate,Other_fields,S6232e91b331c:2 | S6c924fc338c1:2,RE2-OB/checkoutservice_cpu/1/logs.csv
+RE2-SS,logs.csv,container_name,system_id,COARSE_PROXY,"Source CSV identifies system/business stream, not a Kubernetes container; explicit topology mapping required",Other_fields,S6232e91b331c:3,RE2-SS/carts_cpu/1/logs.csv
+RE2-SS,logs.csv,error,level; log_error_ratio,PROXY,Explicit severity and legacy keyword signals; not equivalent to RCAEval error payload,Other_fields,S6232e91b331c:7,RE2-SS/carts_cpu/1/logs.csv
+RE2-SS,logs.csv,level,level,CONDITIONAL,Extract explicit [INFO/WARN/ERROR/...]; missing remains unknown,Other_fields,S6232e91b331c:5,RE2-SS/carts_cpu/1/logs.csv
+RE2-SS,logs.csv,message,message,STRUCTURAL,Split multiline CSV cell into observed lines; retain source_file/source_record/line_number,Other_fields,S6232e91b331c:4,RE2-SS/carts_cpu/1/logs.csv
+RE2-SS,logs.csv,req_path,,MISSING,"CDR output_path is a filesystem path, not an HTTP request path",Other_fields,S6232e91b331c:6,RE2-SS/carts_cpu/1/logs.csv
+RE2-SS,logs.csv,time,timestamp,AXIS,Derive display time from UTC timestamp; do not use time-of-day alone for joins,Other_fields,S6232e91b331c:1,RE2-SS/carts_cpu/1/logs.csv
+RE2-SS,logs.csv,timestamp,timestamp,CONDITIONAL,@timestamp -> UTC epoch seconds; confirm source display timezone; RCAEval timestamp unit is separate,Other_fields,S6232e91b331c:2,RE2-SS/carts_cpu/1/logs.csv
+RE2-TT,logs.csv,container_name,system_id,COARSE_PROXY,"Source CSV identifies system/business stream, not a Kubernetes container; explicit topology mapping required",Other_fields,S6232e91b331c:3,RE2-TT/ts-auth-service_cpu/1/logs.csv
+RE2-TT,logs.csv,error,level; log_error_ratio,PROXY,Explicit severity and legacy keyword signals; not equivalent to RCAEval error payload,Other_fields,S6232e91b331c:7,RE2-TT/ts-auth-service_cpu/1/logs.csv
+RE2-TT,logs.csv,level,level,CONDITIONAL,Extract explicit [INFO/WARN/ERROR/...]; missing remains unknown,Other_fields,S6232e91b331c:5,RE2-TT/ts-auth-service_cpu/1/logs.csv
+RE2-TT,logs.csv,message,message,STRUCTURAL,Split multiline CSV cell into observed lines; retain source_file/source_record/line_number,Other_fields,S6232e91b331c:4,RE2-TT/ts-auth-service_cpu/1/logs.csv
+RE2-TT,logs.csv,req_path,,MISSING,"CDR output_path is a filesystem path, not an HTTP request path",Other_fields,S6232e91b331c:6,RE2-TT/ts-auth-service_cpu/1/logs.csv
+RE2-TT,logs.csv,time,timestamp,AXIS,Derive display time from UTC timestamp; do not use time-of-day alone for joins,Other_fields,S6232e91b331c:1,RE2-TT/ts-auth-service_cpu/1/logs.csv
+RE2-TT,logs.csv,timestamp,timestamp,CONDITIONAL,@timestamp -> UTC epoch seconds; confirm source display timezone; RCAEval timestamp unit is separate,Other_fields,S6232e91b331c:2,RE2-TT/ts-auth-service_cpu/1/logs.csv
+RE3-OB,logs.csv,container_name,system_id,COARSE_PROXY,"Source CSV identifies system/business stream, not a Kubernetes container; explicit topology mapping required",Other_fields,S1fdb5f313494:3,RE3-OB/adservice_f3/1/logs.csv
+RE3-OB,logs.csv,message,message,STRUCTURAL,Split multiline CSV cell into observed lines; retain source_file/source_record/line_number,Other_fields,S1fdb5f313494:4,RE3-OB/adservice_f3/1/logs.csv
+RE3-OB,logs.csv,node_name,,MISSING,Not present in supplied log screenshots,Other_fields,S1fdb5f313494:6,RE3-OB/adservice_f3/1/logs.csv
+RE3-OB,logs.csv,pod_name,,MISSING,Not present in supplied log screenshots,Other_fields,S1fdb5f313494:5,RE3-OB/adservice_f3/1/logs.csv
+RE3-OB,logs.csv,time,timestamp,AXIS,Derive display time from UTC timestamp; do not use time-of-day alone for joins,Other_fields,S1fdb5f313494:1,RE3-OB/adservice_f3/1/logs.csv
+RE3-OB,logs.csv,timestamp,timestamp,CONDITIONAL,@timestamp -> UTC epoch seconds; confirm source display timezone; RCAEval timestamp unit is separate,Other_fields,S1fdb5f313494:2,RE3-OB/adservice_f3/1/logs.csv
+RE3-SS,logs.csv,container_name,system_id,COARSE_PROXY,"Source CSV identifies system/business stream, not a Kubernetes container; explicit topology mapping required",Other_fields,S1fdb5f313494:3,RE3-SS/carts_f1/1/logs.csv
+RE3-SS,logs.csv,message,message,STRUCTURAL,Split multiline CSV cell into observed lines; retain source_file/source_record/line_number,Other_fields,S1fdb5f313494:4,RE3-SS/carts_f1/1/logs.csv
+RE3-SS,logs.csv,node_name,,MISSING,Not present in supplied log screenshots,Other_fields,S1fdb5f313494:6,RE3-SS/carts_f1/1/logs.csv
+RE3-SS,logs.csv,pod_name,,MISSING,Not present in supplied log screenshots,Other_fields,S1fdb5f313494:5,RE3-SS/carts_f1/1/logs.csv
+RE3-SS,logs.csv,time,timestamp,AXIS,Derive display time from UTC timestamp; do not use time-of-day alone for joins,Other_fields,S1fdb5f313494:1,RE3-SS/carts_f1/1/logs.csv
+RE3-SS,logs.csv,timestamp,timestamp,CONDITIONAL,@timestamp -> UTC epoch seconds; confirm source display timezone; RCAEval timestamp unit is separate,Other_fields,S1fdb5f313494:2,RE3-SS/carts_f1/1/logs.csv
+RE3-TT,logs.csv,container_name,system_id,COARSE_PROXY,"Source CSV identifies system/business stream, not a Kubernetes container; explicit topology mapping required",Other_fields,S1fdb5f313494:3,RE3-TT/ts-auth-service_f1/1/logs.csv
+RE3-TT,logs.csv,message,message,STRUCTURAL,Split multiline CSV cell into observed lines; retain source_file/source_record/line_number,Other_fields,S1fdb5f313494:4,RE3-TT/ts-auth-service_f1/1/logs.csv
+RE3-TT,logs.csv,node_name,,MISSING,Not present in supplied log screenshots,Other_fields,S1fdb5f313494:6,RE3-TT/ts-auth-service_f1/1/logs.csv
+RE3-TT,logs.csv,pod_name,,MISSING,Not present in supplied log screenshots,Other_fields,S1fdb5f313494:5,RE3-TT/ts-auth-service_f1/1/logs.csv
+RE3-TT,logs.csv,time,timestamp,AXIS,Derive display time from UTC timestamp; do not use time-of-day alone for joins,Other_fields,S1fdb5f313494:1,RE3-TT/ts-auth-service_f1/1/logs.csv
+RE3-TT,logs.csv,timestamp,timestamp,CONDITIONAL,@timestamp -> UTC epoch seconds; confirm source display timezone; RCAEval timestamp unit is separate,Other_fields,S1fdb5f313494:2,RE3-TT/ts-auth-service_f1/1/logs.csv

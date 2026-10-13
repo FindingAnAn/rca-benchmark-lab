@@ -1,101 +1,100 @@
 # RCA Benchmark Lab
 
-Một project **Modular Monolith**, hai flow: `rcaeval` và `internal`.
+Một project Python, hai luồng chạy local. Mở thư mục project bằng VS Code.
 
-`Raw → kiểm tra chất lượng + EDA → feature + EDA → fit reference → chấm bất thường → ranking → đánh giá/review`
+Code nằm trực tiếp trong `src/`; chạy module bằng `python -m src.cli` từ gốc project. Sau khi đổi cấu trúc, chạy lại `python -m pip install -e . --no-deps` để cập nhật lệnh `rca-lab`.
 
-## 1. Mở bằng VS Code
+- RCAEval: mặc định `~/Downloads/rca_eval`; có thể đổi qua `RCA_DATA_ROOT`.
+- Internal: metric query từ VictoriaMetrics; 5 CSV log tại `~/Downloads/anomaly`, có thể đổi qua `RCA_LOG_ROOT`.
 
-Open Folder `rca-benchmark-lab`. Dùng Python 3.11/3.12; khuyến nghị 3.12.
-Trong Terminal tại thư mục project:
+```mermaid
+flowchart LR
+  A[RCAEval local] --> C[Kiểm tra dữ liệu và EDA raw]
+  B[VictoriaMetrics và CSV log] --> C
+  C --> D[Tính feature và EDA feature]
+  D --> E[Fit reference và chấm current]
+  E --> F[Xếp hạng feature và entity]
+  F --> G[Benchmark RCAEval hoặc review internal]
+```
+
+## 1. Cài đặt
+
+Ubuntu, Python 3.12, terminal tại thư mục project:
 
 ```bash
 python3.12 -m venv .venv312
 source .venv312/bin/activate
-```
-
-Nếu đã có `.venv312`, chỉ activate. Windows: `py -3.12 -m venv .venv312`, rồi `.venv312\Scripts\Activate.ps1`.
-VS Code → **Python: Select Interpreter** → chọn Python trong `.venv312`.
-
-## 2. Cài thư viện
-
-Trên máy công ty, dùng repository nội bộ do bạn cung cấp:
-
-```bash
 python -m pip config --user set global.index-url http://172.20.1.22:8081/repository/pypi-all/simple
 python -m pip config --user set global.trusted-host 172.20.1.22
-python -m pip config list
-python -m pip config debug
-python -m pip index versions matplotlib
 python -m pip install -r requirements.txt
 python -m pip install -e . --no-deps
 ```
 
-`requirements.txt` ghim `matplotlib==3.10.6`. Các lệnh config thay đổi cấu hình pip của user, chỉ chạy trên môi trường được công ty cho phép. Nếu mirror thiếu phiên bản, nhờ quản trị mirror bổ sung; project không tự chuyển sang nguồn bên ngoài.
+Hai lệnh `pip config` dùng mirror nội bộ đã cung cấp, thay đổi cấu hình pip của user. Không cần chạy nếu đã cấu hình đúng. Project không tự chuyển sang mirror ngoài. VS Code → **Python: Select Interpreter** → `.venv312/bin/python`.
 
-## 3. Chạy RCAEval đầy đủ
+Windows: tạo môi trường bằng `py -3.12 -m venv .venv312`, activate bằng `.venv312\Scripts\Activate.ps1`; chạy CLI Python thay cho script Bash. Nhấn F5 để chọn một trong hai flow và nhập thời gian/đường dẫn.
+
+## 2. RCAEval trên dữ liệu đầy đủ
 
 ```bash
-python -m rca_lab.cli rcaeval --config config/rcaeval.json --data data/rcaeval --download --output data/runs/rcaeval_full_01
+bash scripts/run_rcaeval_local.sh check "$HOME/Downloads/rca_eval"
+bash scripts/run_rcaeval_local.sh full "$HOME/Downloads/rca_eval"
 ```
 
-Lệnh tải bộ public từ Hugging Face chính chủ, kiểm tra **735 ca**, gồm metric và log/trace khi metadata khai báo có. Không tự giới hạn 15 ca. Nếu mạng chặn, chuyển nguyên thư mục corpus từ môi trường được phép, bỏ `--download`. Chi tiết: [RCAEval](docs/rcaeval.md).
+`full` kiểm tra từng ca trước khi benchmark 735 ca. Không tải mạng, không tự bỏ ca lỗi. Dùng `eda` thay `full` nếu chỉ khảo sát; `smoke` chạy hai ca để kiểm tra môi trường. Nguồn phải là corpus đã giải nén RE1-OB…RE3-TT hoặc bản Parquet được reader hỗ trợ.
 
-## 4. Chạy dữ liệu internal
+Nếu preflight lỗi: mở `preflight.csv` tại thư mục output được in trên terminal. Chi tiết xử lý clock: [Phân tích và kết quả](docs/analysis.md).
 
-Sửa `config/internal.json`: mapping 5 hệ thống/CSV, bật nguồn metric hoặc log. Mặc định tắt vì chưa có dữ liệu thật.
+## 3. Metric và log internal
+
+Sửa `config/internal.json`:
+
+1. Bật `metric.enabled` và/hoặc `log.enabled`.
+2. Metric: thay năm `match_labels`, chọn `entity_label`; khai báo đúng tên, kind, unit và dimensions. Danh sách mặc định chỉ có request, response và process_time_ms; mở rộng theo [matching](docs/matching.md).
+3. Log: kiểm tra năm tên CSV, system_id, timezone và service ID. Log không có Pod nên không tự ghép vào Pod metric.
+4. Chọn khoảng reference tương đối ổn định trước khoảng cần kiểm tra. Mặc định cần ít nhất 20 cửa sổ reference.
 
 ```bash
 export RCA_VM_API_URL='http://YOUR_HOST:PORT/select/TENANT/prometheus/api/v1'
-export RCA_LOG_ROOT="$HOME/Downloads/rca_logs"
-python -m rca_lab.cli internal --config config/internal.json --start 1791507600 --reference-end 1791509400 --end 1791511200 --output data/runs/internal_01
+export RCA_LOG_ROOT="$HOME/Downloads/anomaly"
+read -rp 'START (UTC epoch giây): ' START
+read -rp 'REFERENCE_END (UTC epoch giây): ' REFERENCE_END
+read -rp 'END (UTC epoch giây): ' END
+bash scripts/run_internal_local.sh "$START" "$REFERENCE_END" "$END" eda
+bash scripts/run_internal_local.sh "$START" "$REFERENCE_END" "$END" full
 ```
 
-Các mốc trên chỉ minh họa UTC epoch; thay bằng thời gian dữ liệu thật. Reference phải đủ ít nhất 20 cửa sổ. VMUI là giao diện; code gọi `query_range` tương ứng. Windows dùng `$env:RCA_LOG_ROOT='C:\Users\YOUR_USER\Downloads\rca_logs'`.
-Chi tiết metric/log và feature BA: [Internal](docs/internal.md).
+URL là API tương ứng VMUI, kết thúc ở `/api/v1`; dùng đúng endpoint single-node hoặc cluster của hệ thống. Nếu cần, đặt `RCA_VM_AUTHORIZATION` qua môi trường. Không lưu token vào Git. Trace/alarm giữ tắt.
 
-## 5. Đọc kết quả
+Mặc định query tối đa một giờ; chia khoảng chạy hoặc điều chỉnh `max_export_seconds`, `max_rows` theo tài nguyên. CSV và JSON raw chỉ được lưu local trong output.
 
-| Artifact | Đọc để biết |
+## 4. Đọc kết quả
+
+| Cần xem | File/thư mục trong output |
 |---|---|
-| `raw_eda/*/distribution.csv` | Phân bố, thiếu, hằng số, outlier của raw |
-| `entity_*/feature_eda/` | Phân bố feature, tương quan reference, tương phản reference/current |
-| `features.parquet`, `coverage.csv` | Feature thực dùng, số feature đủ dữ liệu |
-| `entity_*/model.json`, `reference.parquet` | Tham số model, dữ liệu reference tái lập fit |
-| `evidence.csv`, `ranking.csv` | Bằng chứng theo metric/log và thứ hạng entity |
-| `benchmark_*.csv`, `case_results.csv` | Hit@1/3/5, MRR, phân tích ca sai — chỉ RCAEval |
-| `manifest.json` | Config/artifact/code hash và trạng thái run hoàn tất |
+| Chất lượng và phân bố raw | `raw_eda/`, các file quality |
+| Feature dùng phân tích | `features.parquet`, `coverage.csv` |
+| Phân bố, tương phản, tương quan feature | `entity_*/feature_eda/` |
+| Feature tương đương RCAEval | `calculated_features/` của internal |
+| Feature gây chú ý, thời điểm và giá trị | `feature_ranking.csv`, `evidence.csv` |
+| Thứ hạng entity | `ranking.csv` |
+| Tham số fit và dữ liệu reference | `entity_*/model.json`, `reference.parquet` |
+| Kết quả benchmark | `benchmark_*.csv`, `case_results.csv` của RCAEval |
+| Kiểm tra run hoàn tất, checksum | `manifest.json` |
 
-Mỗi lần chạy dùng một thư mục output mới. Khi lỗi, giữ artifact để điều tra; không có manifest hoàn tất.
-Ảnh chỉ vẽ tối đa 16 cột và một số entity đầu để tiết kiệm tài nguyên; bảng CSV giữ tất cả cột. Outlier là tín hiệu rà soát, chưa phải nhãn lỗi.
+Mỗi run dùng output mới. Internal chưa có nhãn: kết quả là bằng chứng bất thường cần review, chưa xác nhận root cause. Điểm của các phương pháp không cùng thang đo.
 
-## File nào làm gì?
+## 5. Tài liệu và kiểm thử
 
-| File/module | Nhiệm vụ |
-|---|---|
-| `src/rca_lab/cli.py` | Hai lệnh vào hệ thống |
-| `application.py` | Điều phối hai flow, tách fit/score/evaluate |
-| `settings.py` | Config phân tích và biến môi trường đường dẫn/endpoint |
-| `storage.py` | Ghi JSON, checksum và manifest |
-| `domain/contracts.py` | Loại telemetry, chuyển timestamp về UTC |
-| `data/ingestion/rcaeval.py` | Tải/chốt revision, kiểm tra corpus đầy đủ |
-| `data/ingestion/victoria_metrics.py` | Query theo hệ thống và time chunk; lưu JSON raw |
-| `data/ingestion/log_csv.py` | Đọc CSV local theo mapping, lưu bản raw |
-| `data/validation.py` | Kiểm tra schema, trùng/xung đột, thiếu/nonfinite |
-| `features/metrics.py` | Counter → rate; cửa sổ; đối chiếu request/response |
-| `features/logs.py` | Số log, số/ratio keyword lỗi theo cửa sổ |
-| `eda.py` | EDA raw/feature, CSV và biểu đồ local |
-| `modeling.py` | MAD, N-sigma, IQR, PCA và Isolation Forest |
-| `config/*.json` | Đúng hai cấu hình flow |
-| `tests/test_two_flows.py` | Kiểm thử offline về dữ liệu/leakage/flow |
-| `docs/architecture.md` | Quyết định kiến trúc và giới hạn |
-| `docs/conventions/` | Quy ước của bạn, giữ nguyên |
-| `__init__.py` | Khai báo Python package |
+- [Mục đích từng file](docs/files.md)
+- [Matching metric/log với RCAEval](docs/matching.md)
+- [EDA, threshold, model và bằng chứng](docs/analysis.md)
+- [Quy ước project](docs/conventions.md)
 
-Kiểm thử: `python -m pip install -r requirements-dev.txt`, sau đó `python -m pytest -q`.
+```bash
+python -m pip install -r requirements-dev.txt
+python -m pytest -q
+python scripts/package_repo.py
+```
 
-## Quan hệ metric và CDR
-
-Xem [đối chiếu trường và 20 tình huống bất thường](docs/telemetry_review/README.md): danh mục 60 metric từ ảnh, toàn bộ schema CDR trong Excel, điều kiện join, request/response imbalance và phương pháp correlation. Đây là phân tích schema/rule; chưa phải kết quả trên telemetry thật.
-
-Phần code vẽ và threshold đã có: [cách chạy phân tích quan hệ](docs/relationships.md). Chạy độc lập từ `features.parquet` hoặc tự chạy trong flow internal. Module: `src/rca_lab/relationships.py`.
+Lệnh cuối tạo ZIP triển khai theo danh sách file được chọn, không chứa dữ liệu, môi trường Python, tài liệu cũ hoặc demo. Không xóa file gốc. Không ghi đè ZIP đã tồn tại; dùng `--output` để chọn tên mới.

@@ -10,14 +10,18 @@ requires-python = ">=3.11"
 dependencies = ["numpy==2.3.5", "pandas==2.3.3", "matplotlib==3.10.6", "pyarrow==19.0.1", "scikit-learn==1.7.2"]
 
 [project.scripts]
-rca-lab = "rca_lab.cli:main"
+rca-lab = "src.cli:main"
 
 [tool.setuptools.packages.find]
-where = ["src"]
+where = ["."]
+include = ["src", "src.*"]
+
+[tool.setuptools.package-data]
+src = ["rcaeval_expected.json"]
 
 [tool.isort]
 profile = "black"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["src"]
+pythonpath = ["."]

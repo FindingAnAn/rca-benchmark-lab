@@ -1,0 +1,111 @@
+﻿write_service_id,template,position_1based,source_field,output_field,storage_type,status
+7000003,White-Lease,1,CALL_ID,cdr_field_call_id,string,template_candidate; exact field count required
+7000003,White-Lease,2,CONTRACT_ID,cdr_field_contract_id,string,template_candidate; exact field count required
+7000003,White-Lease,3,SUB_ID,cdr_field_sub_id,string,template_candidate; exact field count required
+7000003,White-Lease,4,MSISDN,cdr_field_msisdn,string,template_candidate; exact field count required
+7000003,White-Lease,5,EVENT_ID,cdr_field_event_id,string,template_candidate; exact field count required
+7000003,White-Lease,6,BILL_CYCLE,cdr_field_bill_cycle,string,template_candidate; exact field count required
+7000003,White-Lease,7,STA_DATETIME,cdr_field_sta_datetime,string,template_candidate; exact field count required
+7000003,White-Lease,8,END_DATETIME,cdr_field_end_datetime,string,template_candidate; exact field count required
+7000003,White-Lease,9,PRICE_PLAN_ID,cdr_field_price_plan_id,string,template_candidate; exact field count required
+7000003,White-Lease,10,RESOURCE_CHARGE1,cdr_field_resource_charge1,string,template_candidate; exact field count required
+7000003,White-Lease,11,DISCOUNT,cdr_field_discount,string,template_candidate; exact field count required
+7000003,White-Lease,12,PAID_NUMBER,cdr_field_paid_number,string,template_candidate; exact field count required
+7000003,White-Lease,13,PAID,cdr_field_paid,string,template_candidate; exact field count required
+7000003,White-Lease,14,SEQ,cdr_field_seq,string,template_candidate; exact field count required
+7000003,White-Lease,15,PAID_SUB_ID,cdr_field_paid_sub_id,string,template_candidate; exact field count required
+7000003,White-Lease,16,PAID_CONTRACT_ID,cdr_field_paid_contract_id,string,template_candidate; exact field count required
+7000003,White-Lease,17,TelecomServiceID,cdr_field_telecomserviceid,string,template_candidate; exact field count required
+7000003,White-Lease,18,EVENT_BEGIN_TIME,cdr_field_event_begin_time,string,template_candidate; exact field count required
+7000003,White-Lease,19,CHARGING_CALL_ID,cdr_field_charging_call_id,string,template_candidate; exact field count required
+7000003,White-Lease,20,ACM_DATE,cdr_field_acm_date,string,template_candidate; exact field count required
+7000003,White-Lease,21,BILLING_NBR,cdr_field_billing_nbr,string,template_candidate; exact field count required
+7000003,White-Lease,22,SERVICE_ID,cdr_field_service_id,string,template_candidate; exact field count required
+7000004,Office-wan,1,CALL_ID,cdr_field_call_id,string,template_candidate; exact field count required
+7000004,Office-wan,2,CONTRACT_ID,cdr_field_contract_id,string,template_candidate; exact field count required
+7000004,Office-wan,3,SUB_ID,cdr_field_sub_id,string,template_candidate; exact field count required
+7000004,Office-wan,4,MSISDN,cdr_field_msisdn,string,template_candidate; exact field count required
+7000004,Office-wan,5,EVENT_ID,cdr_field_event_id,string,template_candidate; exact field count required
+7000004,Office-wan,6,BILL_CYCLE,cdr_field_bill_cycle,string,template_candidate; exact field count required
+7000004,Office-wan,7,STA_DATETIME,cdr_field_sta_datetime,string,template_candidate; exact field count required
+7000004,Office-wan,8,END_DATETIME,cdr_field_end_datetime,string,template_candidate; exact field count required
+7000004,Office-wan,9,PRICE_PLAN_ID,cdr_field_price_plan_id,string,template_candidate; exact field count required
+7000004,Office-wan,10,RESOURCE_CHARGE1,cdr_field_resource_charge1,string,template_candidate; exact field count required
+7000004,Office-wan,11,DISCOUNT,cdr_field_discount,string,template_candidate; exact field count required
+7000004,Office-wan,12,PAID_NUMBER,cdr_field_paid_number,string,template_candidate; exact field count required
+7000004,Office-wan,13,PAID,cdr_field_paid,string,template_candidate; exact field count required
+7000004,Office-wan,14,SEQ,cdr_field_seq,string,template_candidate; exact field count required
+7000004,Office-wan,15,PAID_SUB_ID,cdr_field_paid_sub_id,string,template_candidate; exact field count required
+7000004,Office-wan,16,PAID_CONTRACT_ID,cdr_field_paid_contract_id,string,template_candidate; exact field count required
+7000004,Office-wan,17,TelecomServiceID,cdr_field_telecomserviceid,string,template_candidate; exact field count required
+7000004,Office-wan,18,EVENT_BEGIN_TIME,cdr_field_event_begin_time,string,template_candidate; exact field count required
+7000004,Office-wan,19,CHARGING_CALL_ID,cdr_field_charging_call_id,string,template_candidate; exact field count required
+7000004,Office-wan,20,ACM_DATE,cdr_field_acm_date,string,template_candidate; exact field count required
+7000004,Office-wan,21,BILLING_NBR,cdr_field_billing_nbr,string,template_candidate; exact field count required
+7000004,Office-wan,22,SERVICE_ID,cdr_field_service_id,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,1,CALL_ID,cdr_field_call_id,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,2,CONTRACT_ID,cdr_field_contract_id,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,3,SUB_ID,cdr_field_sub_id,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,4,MSISDN,cdr_field_msisdn,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,5,EVENT_ID,cdr_field_event_id,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,6,BILL_CYCLE,cdr_field_bill_cycle,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,7,STA_DATETIME,cdr_field_sta_datetime,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,8,END_DATETIME,cdr_field_end_datetime,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,9,PRICE_PLAN_ID,cdr_field_price_plan_id,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,10,RESOURCE_CHARGE1,cdr_field_resource_charge1,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,11,DISCOUNT,cdr_field_discount,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,12,PAID_NUMBER,cdr_field_paid_number,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,13,PAID,cdr_field_paid,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,14,SEQ,cdr_field_seq,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,15,PAID_SUB_ID,cdr_field_paid_sub_id,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,16,PAID_CONTRACT_ID,cdr_field_paid_contract_id,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,17,TelecomServiceID,cdr_field_telecomserviceid,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,18,EVENT_BEGIN_TIME,cdr_field_event_begin_time,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,19,CHARGING_CALL_ID,cdr_field_charging_call_id,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,20,ACM_DATE,cdr_field_acm_date,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,21,BILLING_NBR,cdr_field_billing_nbr,string,template_candidate; exact field count required
+7000001,LL_MONTHLY_FEE,22,SERVICE_TYPE,cdr_field_service_type,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,1,CALL_ID,cdr_field_call_id,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,2,CONTRACT_ID,cdr_field_contract_id,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,3,SUB_ID,cdr_field_sub_id,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,4,MSISDN,cdr_field_msisdn,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,5,EVENT_ID,cdr_field_event_id,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,6,BILL_CYCLE,cdr_field_bill_cycle,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,7,STA_DATETIME,cdr_field_sta_datetime,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,8,END_DATETIME,cdr_field_end_datetime,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,9,PRICE_PLAN_ID,cdr_field_price_plan_id,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,10,RESOURCE_CHARGE1,cdr_field_resource_charge1,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,11,DISCOUNT,cdr_field_discount,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,12,PAID_NUMBER,cdr_field_paid_number,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,13,PAID,cdr_field_paid,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,14,SEQ,cdr_field_seq,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,15,PAID_SUB_ID,cdr_field_paid_sub_id,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,16,PAID_CONTRACT_ID,cdr_field_paid_contract_id,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,17,TELECOM_SERVICE_ID,cdr_field_telecom_service_id,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,18,EVENT_BEGIN_TIME,cdr_field_event_begin_time,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,19,CHARGING_CALL_ID,cdr_field_charging_call_id,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,20,ACM_DATE,cdr_field_acm_date,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,21,BILLING_NBR,cdr_field_billing_nbr,string,template_candidate; exact field count required
+7000006,IPTV recurring by OCS,22,SERVICE_ID,cdr_field_service_id,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,1,CALL_ID,cdr_field_call_id,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,2,CONTRACT_ID,cdr_field_contract_id,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,3,SUB_ID,cdr_field_sub_id,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,4,MSISDN,cdr_field_msisdn,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,5,EVENT_ID,cdr_field_event_id,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,6,BILL_CYCLE,cdr_field_bill_cycle,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,7,STA_DATETIME,cdr_field_sta_datetime,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,8,END_DATETIME,cdr_field_end_datetime,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,9,PRICE_PLAN_ID,cdr_field_price_plan_id,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,10,RESOURCE_CHARGE1,cdr_field_resource_charge1,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,11,DISCOUNT,cdr_field_discount,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,12,PAID_NUMBER,cdr_field_paid_number,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,13,PAID,cdr_field_paid,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,14,SEQ,cdr_field_seq,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,15,PAID_SUB_ID,cdr_field_paid_sub_id,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,16,PAID_CONTRACT_ID,cdr_field_paid_contract_id,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,17,TelecomServiceID,cdr_field_telecomserviceid,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,18,EVENT_BEGIN_TIME,cdr_field_event_begin_time,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,19,CHARGING_CALL_ID,cdr_field_charging_call_id,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,20,ACM_DATE,cdr_field_acm_date,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,21,BILLING_NBR,cdr_field_billing_nbr,string,template_candidate; exact field count required
+7000005,CABLE_MONTHLY,22,SERVICE_ID,cdr_field_service_id,string,template_candidate; exact field count required

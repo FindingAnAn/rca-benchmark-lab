@@ -1,0 +1,389 @@
+{
+  "version": 1,
+  "source_workbook": "RCAEval_Danh_muc_du_lieu.xlsx",
+  "source_sha256": "b2235d25ad38fb2150cc4ae9cd29173f0da14e3a740cfeded9df4c64c1d1a200",
+  "equivalence_policy": "Canonical unit-explicit features; no automatic renaming to original RCAEval service names or unverified scales.",
+  "recipes": [
+    {
+      "name": "cpu_cores",
+      "inputs": [
+        {
+          "metric": "container_cpu_usage_seconds_total",
+          "kind": "counter",
+          "units": [
+            "seconds"
+          ]
+        }
+      ],
+      "operation": "identity",
+      "unit": "cores",
+      "target_status": "proxy_until_rcaeval_cpu_scale_confirmed",
+      "scale": 1
+    },
+    {
+      "name": "memory_working_set_bytes",
+      "inputs": [
+        {
+          "metric": "container_memory_working_set_bytes",
+          "kind": "gauge",
+          "units": [
+            "bytes"
+          ]
+        }
+      ],
+      "operation": "identity",
+      "unit": "bytes",
+      "target_status": "proxy_until_rcaeval_mem_definition_confirmed",
+      "scale": 1
+    },
+    {
+      "name": "memory_rss_bytes",
+      "inputs": [
+        {
+          "metric": "container_memory_rss",
+          "kind": "gauge",
+          "units": [
+            "bytes"
+          ]
+        }
+      ],
+      "operation": "identity",
+      "unit": "bytes",
+      "target_status": "same_quantity_as_raw_rss_subject_to_export_contract",
+      "scale": 1
+    },
+    {
+      "name": "memory_limit_ratio",
+      "inputs": [
+        {
+          "metric": "container_memory_working_set_bytes",
+          "kind": "gauge",
+          "units": [
+            "bytes"
+          ]
+        },
+        {
+          "metric": "container_spec_memory_limit_bytes",
+          "kind": "gauge",
+          "units": [
+            "bytes"
+          ]
+        }
+      ],
+      "operation": "ratio",
+      "unit": "ratio",
+      "target_status": "internal_extension",
+      "scale": 1
+    },
+    {
+      "name": "container_reads_bytes_per_second",
+      "inputs": [
+        {
+          "metric": "container_fs_reads_bytes_total",
+          "kind": "counter",
+          "units": [
+            "bytes"
+          ]
+        }
+      ],
+      "operation": "identity",
+      "unit": "bytes/s",
+      "target_status": "same_quantity_after_rate_contract",
+      "scale": 1
+    },
+    {
+      "name": "container_writes_bytes_per_second",
+      "inputs": [
+        {
+          "metric": "container_fs_writes_bytes_total",
+          "kind": "counter",
+          "units": [
+            "bytes"
+          ]
+        }
+      ],
+      "operation": "identity",
+      "unit": "bytes/s",
+      "target_status": "same_quantity_after_rate_contract",
+      "scale": 1
+    },
+    {
+      "name": "disk_io_bytes_per_second",
+      "inputs": [
+        {
+          "metric": "container_fs_reads_bytes_total",
+          "kind": "counter",
+          "units": [
+            "bytes"
+          ]
+        },
+        {
+          "metric": "container_fs_writes_bytes_total",
+          "kind": "counter",
+          "units": [
+            "bytes"
+          ]
+        }
+      ],
+      "operation": "sum",
+      "unit": "bytes/s",
+      "target_status": "proxy_not_confirmed_rcaeval_diskio",
+      "scale": 1
+    },
+    {
+      "name": "request_rate",
+      "inputs": [
+        {
+          "metric": "request_counter",
+          "kind": "counter",
+          "units": [
+            "request"
+          ]
+        }
+      ],
+      "operation": "identity",
+      "unit": "request/s",
+      "target_status": "proxy_for_load_workload",
+      "scale": 1
+    },
+    {
+      "name": "response_rate",
+      "inputs": [
+        {
+          "metric": "response_counter",
+          "kind": "counter",
+          "units": [
+            "response"
+          ]
+        }
+      ],
+      "operation": "identity",
+      "unit": "response/s",
+      "target_status": "internal_extension",
+      "scale": 1
+    },
+    {
+      "name": "request_response_gap_ratio",
+      "inputs": [
+        {
+          "metric": "request_counter",
+          "kind": "counter",
+          "units": [
+            "request"
+          ]
+        },
+        {
+          "metric": "response_counter",
+          "kind": "counter",
+          "units": [
+            "response"
+          ]
+        }
+      ],
+      "operation": "relative_gap",
+      "unit": "ratio",
+      "target_status": "internal_extension",
+      "scale": 1
+    },
+    {
+      "name": "processing_time_ms",
+      "inputs": [
+        {
+          "metric": "process_time_ms",
+          "kind": "gauge",
+          "units": [
+            "ms"
+          ]
+        }
+      ],
+      "operation": "identity",
+      "unit": "ms",
+      "target_status": "proxy_for_latency_not_percentiles",
+      "scale": 1
+    },
+    {
+      "name": "timeout_ratio",
+      "inputs": [
+        {
+          "metric": "request_timeout_counter",
+          "kind": "counter",
+          "units": [
+            "request"
+          ]
+        },
+        {
+          "metric": "request_counter",
+          "kind": "counter",
+          "units": [
+            "request"
+          ]
+        }
+      ],
+      "operation": "ratio",
+      "unit": "ratio",
+      "target_status": "proxy_not_all_errors",
+      "scale": 1
+    },
+    {
+      "name": "node_memory_available_ratio",
+      "inputs": [
+        {
+          "metric": "node_memory_MemAvailable_bytes",
+          "kind": "gauge",
+          "units": [
+            "bytes"
+          ]
+        },
+        {
+          "metric": "node_memory_MemTotal_bytes",
+          "kind": "gauge",
+          "units": [
+            "bytes"
+          ]
+        }
+      ],
+      "operation": "ratio",
+      "unit": "ratio",
+      "target_status": "internal_extension",
+      "scale": 1
+    },
+    {
+      "name": "node_filesystem_free_ratio",
+      "inputs": [
+        {
+          "metric": "node_filesystem_free_bytes",
+          "kind": "gauge",
+          "units": [
+            "bytes"
+          ]
+        },
+        {
+          "metric": "node_filesystem_size_bytes",
+          "kind": "gauge",
+          "units": [
+            "bytes"
+          ]
+        }
+      ],
+      "operation": "ratio",
+      "unit": "ratio",
+      "target_status": "internal_extension",
+      "scale": 1
+    },
+    {
+      "name": "node_read_mean_io_ms",
+      "inputs": [
+        {
+          "metric": "node_disk_read_time_seconds_total",
+          "kind": "counter",
+          "units": [
+            "seconds"
+          ]
+        },
+        {
+          "metric": "node_disk_reads_completed_total",
+          "kind": "counter",
+          "units": [
+            "operation"
+          ]
+        }
+      ],
+      "operation": "ratio",
+      "unit": "ms/operation",
+      "target_status": "internal_extension",
+      "scale": 1000
+    },
+    {
+      "name": "node_write_mean_io_ms",
+      "inputs": [
+        {
+          "metric": "node_disk_write_time_seconds_total",
+          "kind": "counter",
+          "units": [
+            "seconds"
+          ]
+        },
+        {
+          "metric": "node_disk_writes_completed_total",
+          "kind": "counter",
+          "units": [
+            "operation"
+          ]
+        }
+      ],
+      "operation": "ratio",
+      "unit": "ms/operation",
+      "target_status": "internal_extension",
+      "scale": 1000
+    },
+    {
+      "name": "db_read_error_ratio",
+      "inputs": [
+        {
+          "metric": "aerospike_namespace_client_read_error",
+          "kind": "counter",
+          "units": [
+            "operation"
+          ]
+        },
+        {
+          "metric": "aerospike_namespace_client_read_success",
+          "kind": "counter",
+          "units": [
+            "operation"
+          ]
+        }
+      ],
+      "operation": "fraction_of_sum",
+      "unit": "ratio",
+      "target_status": "db_only_not_app_error",
+      "scale": 1
+    },
+    {
+      "name": "db_write_error_ratio",
+      "inputs": [
+        {
+          "metric": "aerospike_namespace_client_write_error",
+          "kind": "counter",
+          "units": [
+            "operation"
+          ]
+        },
+        {
+          "metric": "aerospike_namespace_client_write_success",
+          "kind": "counter",
+          "units": [
+            "operation"
+          ]
+        }
+      ],
+      "operation": "fraction_of_sum",
+      "unit": "ratio",
+      "target_status": "db_only_not_app_error",
+      "scale": 1
+    },
+    {
+      "name": "db_delete_error_ratio",
+      "inputs": [
+        {
+          "metric": "aerospike_namespace_client_delete_error",
+          "kind": "counter",
+          "units": [
+            "operation"
+          ]
+        },
+        {
+          "metric": "aerospike_namespace_client_delete_success",
+          "kind": "counter",
+          "units": [
+            "operation"
+          ]
+        }
+      ],
+      "operation": "fraction_of_sum",
+      "unit": "ratio",
+      "target_status": "db_only_not_app_error",
+      "scale": 1
+    }
+  ]
+}

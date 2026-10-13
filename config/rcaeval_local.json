@@ -1,0 +1,33 @@
+{
+  "analysis": {
+    "window_seconds": 30,
+    "min_reference_points": 10,
+    "min_coverage_ratio": 0.8,
+    "random_seed": 42,
+    "methods": [
+      "mad",
+      "nsigma",
+      "iqr",
+      "pca",
+      "isolation_forest"
+    ],
+    "pca_components": 5,
+    "forest_trees": 32,
+    "forest_samples": 256,
+    "eda_max_visual_entities": 2,
+    "eda_max_visual_features": 16,
+    "eda_max_correlation_features": 128
+  },
+  "rcaeval_input": {
+    "missing_time_policy": "quarantine",
+    "case_overrides": {
+      "re1ob_productcatalogservice_cpu_3": {
+        "duplicate_time_policy": "align_blocks",
+        "expected_time_columns": [
+          1,
+          53
+        ]
+      }
+    }
+  }
+}

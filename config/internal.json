@@ -14,7 +14,10 @@
     "max_rows": 500000,
     "pca_components": 5,
     "forest_trees": 32,
-    "forest_samples": 256
+    "forest_samples": 256,
+    "eda_max_visual_entities": 5,
+    "eda_max_visual_features": 16,
+    "eda_max_correlation_features": 128
   },
   "metric": {
     "enabled": false,
@@ -91,46 +94,52 @@
     "error_pattern": "error|exception|timeout|failed",
     "sources": [
       {
-        "file": "system_1.csv",
-        "system_id": "system_1",
-        "timestamp_column": "timestamp",
-        "text_column": "text",
-        "time_unit": "iso",
-        "timezone": "Asia/Ho_Chi_Minh"
+        "file": "hht_fixed_whitelease_to290926.csv",
+        "system_id": "hht_fixed_whitelease",
+        "timestamp_column": "@timestamp",
+        "text_column": "message",
+        "time_unit": "kibana_display",
+        "timezone": "Asia/Ho_Chi_Minh",
+        "cdr_service_id": "7000003"
       },
       {
-        "file": "system_2.csv",
-        "system_id": "system_2",
-        "timestamp_column": "timestamp",
-        "text_column": "text",
-        "time_unit": "iso",
-        "timezone": "Asia/Ho_Chi_Minh"
+        "file": "hht_fixed_officewan_to290926.csv",
+        "system_id": "hht_fixed_officewan",
+        "timestamp_column": "@timestamp",
+        "text_column": "message",
+        "time_unit": "kibana_display",
+        "timezone": "Asia/Ho_Chi_Minh",
+        "cdr_service_id": "7000004"
       },
       {
-        "file": "system_3.csv",
-        "system_id": "system_3",
-        "timestamp_column": "timestamp",
-        "text_column": "text",
-        "time_unit": "iso",
-        "timezone": "Asia/Ho_Chi_Minh"
+        "file": "hht_fixed_llmonthlyfee_to290926.csv",
+        "system_id": "hht_fixed_llmonthlyfee",
+        "timestamp_column": "@timestamp",
+        "text_column": "message",
+        "time_unit": "kibana_display",
+        "timezone": "Asia/Ho_Chi_Minh",
+        "cdr_service_id": "7000001"
       },
       {
-        "file": "system_4.csv",
-        "system_id": "system_4",
-        "timestamp_column": "timestamp",
-        "text_column": "text",
-        "time_unit": "iso",
-        "timezone": "Asia/Ho_Chi_Minh"
+        "file": "hht_fixed_iptvrecurringbyocs_to290926.csv",
+        "system_id": "hht_fixed_iptvrecurringbyocs",
+        "timestamp_column": "@timestamp",
+        "text_column": "message",
+        "time_unit": "kibana_display",
+        "timezone": "Asia/Ho_Chi_Minh",
+        "cdr_service_id": "7000006"
       },
       {
-        "file": "system_5.csv",
-        "system_id": "system_5",
-        "timestamp_column": "timestamp",
-        "text_column": "text",
-        "time_unit": "iso",
-        "timezone": "Asia/Ho_Chi_Minh"
+        "file": "hht_fixed_cablemonthly_to290926.csv",
+        "system_id": "hht_fixed_cablemonthly",
+        "timestamp_column": "@timestamp",
+        "text_column": "message",
+        "time_unit": "kibana_display",
+        "timezone": "Asia/Ho_Chi_Minh",
+        "cdr_service_id": "7000005"
       }
-    ]
+    ],
+    "parser_config": "config/log_parser.json"
   },
   "trace": {
     "enabled": false
@@ -180,5 +189,9 @@
         "consecutive_windows": 3
       }
     ]
+  },
+  "feature_calculation": {
+    "enabled": true,
+    "spec_path": "config/feature_mapping.json"
   }
 }

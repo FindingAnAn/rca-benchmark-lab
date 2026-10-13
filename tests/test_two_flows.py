@@ -7,13 +7,13 @@ import numpy as np
 import pandas as pd
 import pytest
 
-from rca_lab.application import analyze_features, run_internal
-from rca_lab.data.ingestion.log_csv import CsvLogAdapter
-from rca_lab.data.ingestion.rcaeval import inventory
-from rca_lab.data.ingestion.victoria_metrics import VictoriaMetricsAdapter
-from rca_lab.features.metrics import request_response_features, resample_metrics
-from rca_lab.modeling import score_matrix
-from rca_lab.settings import AnalysisSettings, RuntimeSettings
+from src.application import analyze_features, run_internal
+from src.data.ingestion.log_csv import CsvLogAdapter
+from src.data.ingestion.victoria_metrics import VictoriaMetricsAdapter
+from src.features.metrics import request_response_features, resample_metrics
+from src.modeling import score_matrix
+from src.rcaeval_source import inventory
+from src.settings import AnalysisSettings, RuntimeSettings
 
 
 def metric_rows() -> pd.DataFrame:
@@ -114,6 +114,8 @@ def test_models_keep_systems_separate(tmp_path):
 
 def test_internal_end_to_end_unlabelled(tmp_path):
     source = metric_rows().iloc[:1].copy()
+    source["metric"] = "request_counter"
+    source["unit"] = "request"
     source = pd.concat([source] * 180, ignore_index=True)
     source["timestamp"] = np.arange(180) * 10
     source["value"] = np.arange(180) * 10
@@ -124,6 +126,10 @@ def test_internal_end_to_end_unlabelled(tmp_path):
         Path(__file__).resolve().parents[1], tmp_path, tmp_path, "", ""
     )
     config = dict(
+        feature_calculation={
+            "enabled": True,
+            "spec_path": "config/feature_mapping.json",
+        },
         metric={"enabled": False},
         log={"enabled": False},
         trace={"enabled": False},
@@ -143,21 +149,19 @@ def test_internal_end_to_end_unlabelled(tmp_path):
     manifest = json.loads((output / "manifest.json").read_text())
     assert manifest["evaluation"] == "unlabelled_review_only"
     assert (output / "ranking.csv").exists()
+    calculated = pd.read_parquet(output / "calculated_features/features.parquet")
+    assert set(calculated.feature_name) == {"request_rate"}
+    assert calculated.window_end.max() <= 1800
     assert not (output / "benchmark_overall.csv").exists()
 
 
 def test_full_corpus_gate_rejects_incomplete_data(tmp_path):
-    source = (
-        Path(__file__).resolve().parents[1] / "data/public/rcaeval_sample/cases.parquet"
-    )
-    if not source.exists():
-        pytest.skip("Optional public metadata is not bundled")
-    (tmp_path / "cases.parquet").write_bytes(source.read_bytes())
-    with pytest.raises(ValueError, match="Missing"):
-        inventory(tmp_path)
-    status = json.loads((tmp_path / "inventory.json").read_text())
-    assert status["cases"] == 735
-    assert status["mode"] == "full"
+    report = tmp_path / "inventory.json"
+    with pytest.raises(ValueError, match="Inventory failed"):
+        inventory(tmp_path, report=report)
+    status = json.loads(report.read_text())
+    assert status["expected_cases"] == 735
+    assert status["status"] == "FAILED"
 
 
 def test_log_path_cannot_escape_root(tmp_path):

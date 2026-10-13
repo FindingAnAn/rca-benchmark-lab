@@ -1,7 +1,14 @@
 {
   "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
-  "python.testing.pytestArgs": ["tests"],
-  "files.exclude": {"**/__pycache__": true},
-  "search.exclude": {"data": true, ".venv312": true}
+  "python.testing.pytestArgs": [
+    "tests"
+  ],
+  "files.exclude": {
+    "**/__pycache__": true
+  },
+  "search.exclude": {
+    ".venv312": true,
+    "./data": true
+  }
 }

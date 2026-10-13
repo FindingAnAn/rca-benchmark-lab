@@ -1,4 +1,71 @@
-{"version":"0.2.0","configurations":[
- {"name":"RCAEval full (corpus already local)","type":"debugpy","request":"launch","module":"rca_lab.cli","args":["rcaeval","--config","config/rcaeval.json","--data","data/rcaeval","--output","data/runs/rcaeval_debug"],"cwd":"${workspaceFolder}","console":"integratedTerminal"},
- {"name":"Internal (edit time range first)","type":"debugpy","request":"launch","module":"rca_lab.cli","args":["internal","--config","config/internal.json","--start","1791507600","--reference-end","1791509400","--end","1791511200","--output","data/runs/internal_debug"],"cwd":"${workspaceFolder}","console":"integratedTerminal"}
-]}
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "rcaeval",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "src.cli",
+      "args": [
+        "rcaeval",
+        "--config",
+        "config/rcaeval_local.json",
+        "--output",
+        "${input:output}",
+        "--data",
+        "${input:data}"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "internal",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "src.cli",
+      "args": [
+        "internal",
+        "--config",
+        "config/internal.json",
+        "--output",
+        "${input:output}",
+        "--start",
+        "${input:start}",
+        "--reference-end",
+        "${input:reference}",
+        "--end",
+        "${input:end}"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "output",
+      "type": "promptString",
+      "description": "Thư mục output mới, chưa tồn tại"
+    },
+    {
+      "id": "data",
+      "type": "promptString",
+      "description": "Thư mục RCAEval đã giải nén",
+      "default": "~/Downloads/rca_eval"
+    },
+    {
+      "id": "start",
+      "type": "promptString",
+      "description": "UTC epoch bắt đầu"
+    },
+    {
+      "id": "reference",
+      "type": "promptString",
+      "description": "UTC epoch kết thúc reference"
+    },
+    {
+      "id": "end",
+      "type": "promptString",
+      "description": "UTC epoch kết thúc dữ liệu"
+    }
+  ]
+}

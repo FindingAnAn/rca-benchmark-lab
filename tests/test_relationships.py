@@ -3,7 +3,7 @@
 import numpy as np
 import pandas as pd
 
-from rca_lab.relationships import correlation_pairs, evaluate_rule, relationship_report
+from src.relationships import correlation_pairs, evaluate_rule, relationship_report
 
 
 def test_high_correlation_can_still_have_imbalance():
